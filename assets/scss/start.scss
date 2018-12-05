@@ -7,7 +7,7 @@
 html,body,.box{
   @extend %full;
   margin: 0 auto;
-  min-width: 1440px;
+  min-width: 1200px;
   @include pos(relative);
 }
 
