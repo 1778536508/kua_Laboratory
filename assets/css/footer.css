@@ -1,0 +1,172 @@
+@charset "UTF-8";
+/**
+  显示
+ */
+@keyframes boxShow {
+  from {
+    opacity: 0;
+    background: #fff; }
+  to {
+    opacity: 1; } }
+/**
+ 背景图片放大循环动画
+ */
+@-webkit-keyframes maxismin {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.5); }
+  100% {
+    transform: scale(2); } }
+/**
+文字向右移动动画
+ */
+@keyframes myfirst {
+  from {
+    transform: translateX(-400px); }
+  to {
+    transform: translateX(234px); } }
+/**
+文字向右移动
+ */
+@keyframes myright {
+  from {
+    margin-left: -300px; }
+  to {
+    margin-left: 0; } }
+/**
+文字向左移动动画
+ */
+@keyframes myleft {
+  from {
+    right: -300px; }
+  to {
+    right: 0; } }
+@keyframes mywidth {
+  from {
+    width: 0; }
+  to {
+    width: 500px; } }
+@keyframes myantion {
+  0% {
+    width: 0;
+    left: 0; }
+  50% {
+    width: 500px;
+    left: 0; }
+  100% {
+    width: 500px;
+    left: 600px; } }
+@keyframes mywidth1 {
+  from {
+    width: 0; }
+  to {
+    width: 400px; } }
+@keyframes myantion1 {
+  0% {
+    width: 0;
+    left: 0; }
+  50% {
+    width: 100%;
+    left: 0; }
+  100% {
+    width: 400px;
+    left: 100%; } }
+@keyframes mywidth2 {
+  from {
+    width: 0; }
+  to {
+    width: 290px; } }
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body, .box {
+  width: 100%;
+  height: 100%; }
+
+html {
+  box-sizing: border-box;
+  animation: boxShow .5s linear forwards; }
+
+html, body, .box {
+  margin: 0 auto;
+  min-width: 1200px;
+  position: relative; }
+
+.footer {
+  width: 100%;
+  height: 384px;
+  background: #000000;
+  padding: 0 45px;
+  box-sizing: border-box; }
+  .footer > ul {
+    max-width: 1440px;
+    min-width: 1200px;
+    margin: 0 auto;
+    zoom: 1;
+    position: relative; }
+    .footer > ul:after {
+      display: block;
+      clear: both;
+      content: ''; }
+    .footer > ul > li {
+      float: left; }
+      .footer > ul > li .footer-logo {
+        width: 133px;
+        height: 40px;
+        background: url("../images/icon_menu_logo_light.png") no-repeat;
+        background-size: 100% 100%;
+        margin-top: 81px; }
+      .footer > ul > li .footer-Copyright {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.56);
+        letter-spacing: 0;
+        line-height: 26px;
+        margin-top: 131px; }
+      .footer > ul > li:nth-of-type(2) {
+        margin-left: 251px; }
+      .footer > ul > li ul {
+        zoom: 1; }
+        .footer > ul > li ul:after {
+          display: block;
+          clear: both;
+          content: ''; }
+        .footer > ul > li ul li {
+          float: left; }
+          .footer > ul > li ul li:nth-of-type(2) {
+            margin-left: 46px; }
+          .footer > ul > li ul li .footer-txt-let {
+            font-size: 32px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            line-height: 40px;
+            margin-top: 80px;
+            margin-bottom: 60px; }
+          .footer > ul > li ul li .footer-txt-content {
+            font-size: 12px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            line-height: 26px;
+            margin-bottom: 20px; }
+            .footer > ul > li ul li .footer-txt-content.active {
+              margin-top: 180px;
+              margin-left: 7px; }
+          .footer > ul > li ul li .footer-txt-hey {
+            opacity: 0.56;
+            font-size: 32px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            line-height: 40px;
+            margin-top: 80px;
+            margin-bottom: 60px; }
+      .footer > ul > li .footer-qrCode {
+        width: 64px;
+        height: 64px;
+        background: url("../images/Bitmap.png") no-repeat;
+        background-size: 100% 100%;
+        position: absolute;
+        right: 0;
+        bottom: 20px; }
+
+/*# sourceMappingURL=footer.css.map */

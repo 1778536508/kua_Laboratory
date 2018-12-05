@@ -1,0 +1,88 @@
+@charset "utf-8";
+@import "./base";
+.example-box {
+  width: 100%;
+  height: 100%;
+  min-width: 1200px;
+  @include clearfix;
+}
+.example-content {
+  width: 100%;
+  padding: 174px 0 0;
+  box-sizing: border-box;
+  .example-title {
+    max-width: 1440px;
+    min-width: 1200px;
+    margin: 0 auto;
+    font-size: 60px;
+    color: #000000;
+    letter-spacing: 0;
+    box-sizing: border-box;
+    padding-left: 61px;
+  }
+  .example-banner {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 137px 0 172px;
+    .swiper-container {
+      width: 100%;
+      @include pos(relative);
+      .swiper-wrapper {
+        width: 100%;
+        .swiper-slide {
+          width: 100%;
+          height: 600px;
+          overflow: hidden;
+          box-sizing: border-box;
+          padding-right: 256px;
+          img{
+            display: block;
+            width: 100%;
+            min-height: 600px;
+          }
+        }
+      }
+      .swiper-button-box {
+        float: right;
+        margin-right: 256px;
+        margin-top: 64.2px;
+        width: 100px;
+        height: 30px;
+        background: #fff;
+        @include pos(relative);
+        .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+          right: auto;
+          top: 0;
+          left: 0;
+          margin: 0;
+          bottom: auto;
+          background: url("../images/icon_product_prev_def.png") no-repeat;
+          &.swiper-button-disabled {
+            background: url("../images/icon_product_prev_dis.png") no-repeat;
+          }
+        }
+        .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+          left: auto;
+          transform: none;
+          top: 0;
+          right: 0;
+          margin: 0;
+          bottom: auto;
+          background: url("../images/icon_product_next_def.png") no-repeat;
+          &.swiper-button-disabled {
+            background: url("../images/icon_product_next_dis.png") no-repeat;
+          }
+        }
+
+      }
+      .swiper-pagination {
+        width: 300px;
+        text-align: left;
+        left: 132px;
+      }
+
+    }
+
+  }
+}
+

@@ -1,0 +1,171 @@
+@charset "UTF-8";
+/**
+  显示
+ */
+@keyframes boxShow {
+  from {
+    opacity: 0;
+    background: #fff; }
+  to {
+    opacity: 1; } }
+/**
+ 背景图片放大循环动画
+ */
+@-webkit-keyframes maxismin {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.5); }
+  100% {
+    transform: scale(2); } }
+/**
+文字向右移动动画
+ */
+@keyframes myfirst {
+  from {
+    transform: translateX(-400px); }
+  to {
+    transform: translateX(234px); } }
+/**
+文字向右移动
+ */
+@keyframes myright {
+  from {
+    margin-left: -300px; }
+  to {
+    margin-left: 0; } }
+/**
+文字向左移动动画
+ */
+@keyframes myleft {
+  from {
+    right: -300px; }
+  to {
+    right: 0; } }
+@keyframes mywidth {
+  from {
+    width: 0; }
+  to {
+    width: 500px; } }
+@keyframes myantion {
+  0% {
+    width: 0;
+    left: 0; }
+  50% {
+    width: 500px;
+    left: 0; }
+  100% {
+    width: 500px;
+    left: 600px; } }
+@keyframes mywidth1 {
+  from {
+    width: 0; }
+  to {
+    width: 400px; } }
+@keyframes myantion1 {
+  0% {
+    width: 0;
+    left: 0; }
+  50% {
+    width: 100%;
+    left: 0; }
+  100% {
+    width: 400px;
+    left: 100%; } }
+@keyframes mywidth2 {
+  from {
+    width: 0; }
+  to {
+    width: 290px; } }
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body, .box {
+  width: 100%;
+  height: 100%; }
+
+html {
+  box-sizing: border-box;
+  animation: boxShow .5s linear forwards; }
+
+html, body, .box {
+  margin: 0 auto;
+  min-width: 1200px;
+  position: relative; }
+
+.example-box {
+  width: 100%;
+  height: 100%;
+  min-width: 1200px;
+  zoom: 1; }
+  .example-box:after {
+    display: block;
+    clear: both;
+    content: ''; }
+
+.example-content {
+  width: 100%;
+  padding: 174px 0 0;
+  box-sizing: border-box; }
+  .example-content .example-title {
+    max-width: 1440px;
+    min-width: 1200px;
+    margin: 0 auto;
+    font-size: 60px;
+    color: #000000;
+    letter-spacing: 0;
+    box-sizing: border-box;
+    padding-left: 61px; }
+  .example-content .example-banner {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 137px 0 172px; }
+    .example-content .example-banner .swiper-container {
+      width: 100%;
+      position: relative; }
+      .example-content .example-banner .swiper-container .swiper-wrapper {
+        width: 100%; }
+        .example-content .example-banner .swiper-container .swiper-wrapper .swiper-slide {
+          width: 100%;
+          height: 600px;
+          overflow: hidden;
+          box-sizing: border-box;
+          padding-right: 256px; }
+          .example-content .example-banner .swiper-container .swiper-wrapper .swiper-slide img {
+            display: block;
+            width: 100%;
+            min-height: 600px; }
+      .example-content .example-banner .swiper-container .swiper-button-box {
+        float: right;
+        margin-right: 256px;
+        margin-top: 64.2px;
+        width: 100px;
+        height: 30px;
+        background: #fff;
+        position: relative; }
+        .example-content .example-banner .swiper-container .swiper-button-box .swiper-button-prev, .example-content .example-banner .swiper-container .swiper-button-box .swiper-container-rtl .swiper-button-next {
+          right: auto;
+          top: 0;
+          left: 0;
+          margin: 0;
+          bottom: auto;
+          background: url("../images/icon_product_prev_def.png") no-repeat; }
+          .example-content .example-banner .swiper-container .swiper-button-box .swiper-button-prev.swiper-button-disabled, .example-content .example-banner .swiper-container .swiper-button-box .swiper-container-rtl .swiper-button-next.swiper-button-disabled {
+            background: url("../images/icon_product_prev_dis.png") no-repeat; }
+        .example-content .example-banner .swiper-container .swiper-button-box .swiper-button-next, .example-content .example-banner .swiper-container .swiper-button-box .swiper-container-rtl .swiper-button-prev {
+          left: auto;
+          transform: none;
+          top: 0;
+          right: 0;
+          margin: 0;
+          bottom: auto;
+          background: url("../images/icon_product_next_def.png") no-repeat; }
+          .example-content .example-banner .swiper-container .swiper-button-box .swiper-button-next.swiper-button-disabled, .example-content .example-banner .swiper-container .swiper-button-box .swiper-container-rtl .swiper-button-prev.swiper-button-disabled {
+            background: url("../images/icon_product_next_dis.png") no-repeat; }
+      .example-content .example-banner .swiper-container .swiper-pagination {
+        width: 300px;
+        text-align: left;
+        left: 132px; }
+
+/*# sourceMappingURL=example.css.map */

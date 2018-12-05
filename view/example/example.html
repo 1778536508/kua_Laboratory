@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>案例</title>
+    <link rel="stylesheet" href="../../assets/css/default.css">
+    <link rel="stylesheet" href="../../assets/css/example.css">
+    <link rel="stylesheet" href="../../assets/css/header.css">
+    <link rel="stylesheet" href="../../assets/css/footer.css">
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../components/header.js"></script>
+    <script src="../../components/footer.js"></script>
+    <link rel="stylesheet" href="../../assets/css/swiper.min.css">
+    <script src="../../assets/js/swiper.min.js"></script>
+</head>
+<body>
+<div class="example-box">
+    <div class="header active" id="header"></div>
+    <div class="example-content">
+        <h2 class="example-title">K² Star Insides</h2>
+        <div class="example-banner">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../../assets/images/img_product_1.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../../assets/images/img_product_2.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../../assets/images/img_product_3.png" alt=""></div>
+                </div>
+                <!--左右切换-->
+                <div class="swiper-button-box">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <!--分页-->
+                <div class="swiper-pagination"></div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="footer" id="footer"></div>
+</div>
+
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        $('#header-title-pics > li:nth-of-type(2)').addClass('active');
+        var mySwiper = new Swiper('.swiper-container', {
+            loop : true,
+            effect : 'fade',
+            autoplay: 30000,//可选选项，自动滑动
+            prevButton:'.swiper-button-prev',
+            nextButton:'.swiper-button-next',
+            pagination : '.swiper-pagination',
+            paginationType : 'custom',
+            paginationCustomRender: function (swiper, current, total) {
+                var iscurrent, istotal;
+                current = current < 9 ? '0' + current : current;
+                total = total < 9 ? '0' + total : total;
+                return current + ' / ' + total;
+            }
+        })
+    })
+
+</script>
