@@ -10,26 +10,50 @@ $(document).ready(function(){
     $(window).scroll(function () {
         console.log($(window).scrollTop());
         if ($(window).scrollTop() > 100) {
-            $("#home-list").animate({opacity: '1', animation: 'all 0.5s'});
+            $("#home-list").animate({opacity: '1'}, 1000);
         }
-        if ($(window).scrollTop() > 700) {
-            $("#home-type-txt1").animate({left: '132px', animation: 'all 3s'});
+        if ($(window).scrollTop() > 900) {
+            $("#home-antion-left1").animate({left: '200%'},800,function () {
+                $("#home-type-txt1").animate({left: '132px'},"slow",function () {
+                    $("#home-type-txt1 > p").addClass('active');
+                });
+            })
         }
-        if ($(window).scrollTop() > 1100) {
-            $("#home-type-txt2").animate({left: '132px', animation: 'all 3s'});
+        if ($(window).scrollTop() > 1600) {
+            $("#home-antion-left2").animate({left: '200%'},800,function () {
+                $("#home-type-txt2").animate({left: '132px'},"slow",function () {
+                    $("#home-type-txt2 > p").addClass('active');
+                });
+            })
+
         }
-        if ($(window).scrollTop() > 2100) {
-            $("#home-type-txt3").animate({left: '132px', animation: 'all 3s'});
+        if ($(window).scrollTop() > 2300) {
+            $("#home-antion-left3").animate({left: '200%'},800,function () {
+                $("#home-type-txt3").animate({left: '132px'},"slow",function () {
+                    $("#home-type-txt3 > p").addClass('active');
+                });
+            })
+
         }
         if ($(window).scrollTop() > 3000) {
-            $("#home-type-txt4").animate({left: '132px', animation: 'all 3s'});
+            $("#home-antion-left4").animate({left: '200%'},800,function () {
+                $("#home-type-txt4").animate({left: '132px'},"slow",function () {
+                    $("#home-type-txt4 > p").addClass('active');
+                });
+            })
+
         }
-        if ($(window).scrollTop() > 3600) {
-            $("#home-type-txt5").animate({left: '132px', animation: 'all 3s'});
+        if ($(window).scrollTop() > 3500) {
+            $("#home-antion-left5").animate({left: '200%'},800,function () {
+                $("#home-type-txt5").animate({left: '132px'},"slow",function () {
+                    $("#home-type-txt5 > p").addClass('active');
+                });
+            })
+
         }
-        if ($(window).scrollTop() > 4700) {
-            $("#home-cooperation-name").animate({left: '120px', animation: 'all 4s'});
-            $("#home-cooperation-btn").animate({right: '120px', animation: 'all 4s'});
+        if ($(window).scrollTop() > 4000) {
+            $("#home-cooperation-name").animate({left: '120px'},"slow");
+            $("#home-cooperation-btn").animate({right: '120px'}, "slow");
         }
     })
 });

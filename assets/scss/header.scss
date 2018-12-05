@@ -1,13 +1,21 @@
 @charset "utf-8";
 @import "./base";
 .header {
+  width: 100%;
   @include pos();
   left: 0;
+  right: 0;
+  margin: auto;
   top: 0;
   z-index: 1;
-  width: 100%;
-  min-width: 1200px;
-  @include clearfix;
+  box-sizing: border-box;
+  padding: 0 45px;
+  .header-content {
+    max-width: 1440px;
+    min-width: 1200px;
+    @include clearfix;
+    margin: 0 auto;
+  }
   .header-logo {
     float: left;
     width: 120px;
@@ -16,17 +24,20 @@
     background-size:100% 100%;
     background-repeat: no-repeat;
     margin-top: 20px;
-    margin-left: 132px;
+    //margin-left: 45px;
   }
   .header-title {
     float: right;
     ul {
       @include clearfix;
-      margin-right: 32px;
+      //margin-right: 45px;
       margin-top: 28px;
       li {
         float: left;
         margin-right: 100px;
+        &:nth-of-type(5) {
+          margin-right: 0;
+        }
         a {
           color: #fff;
           @include pos(relative);

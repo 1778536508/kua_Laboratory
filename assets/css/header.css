@@ -31,17 +31,52 @@
  */
 @keyframes myright {
   from {
-    left: -100px; }
+    margin-left: -300px; }
   to {
-    left: 234px; } }
+    margin-left: 0; } }
 /**
 文字向左移动动画
  */
 @keyframes myleft {
   from {
-    right: -100px; }
+    right: -300px; }
   to {
-    right: 350px; } }
+    right: 0; } }
+@keyframes mywidth {
+  from {
+    width: 0; }
+  to {
+    width: 500px; } }
+@keyframes myantion {
+  0% {
+    width: 0;
+    left: 0; }
+  50% {
+    width: 500px;
+    left: 0; }
+  100% {
+    width: 500px;
+    left: 600px; } }
+@keyframes mywidth1 {
+  from {
+    width: 0; }
+  to {
+    width: 400px; } }
+@keyframes myantion1 {
+  0% {
+    width: 0;
+    left: 0; }
+  50% {
+    width: 100%;
+    left: 0; }
+  100% {
+    width: 400px;
+    left: 100%; } }
+@keyframes mywidth2 {
+  from {
+    width: 0; }
+  to {
+    width: 290px; } }
 * {
   margin: 0;
   padding: 0; }
@@ -62,7 +97,9 @@ html, body, .box {
 .footer {
   width: 100%;
   height: 384px;
-  background: #000000; }
+  background: #000000;
+  padding: 0 45px;
+  box-sizing: border-box; }
   .footer > ul {
     max-width: 1440px;
     min-width: 1200px;
@@ -133,17 +170,24 @@ html, body, .box {
         bottom: 20px; }
 
 .header {
+  width: 100%;
   position: absolute;
   left: 0;
+  right: 0;
+  margin: auto;
   top: 0;
   z-index: 1;
-  width: 100%;
-  min-width: 1200px;
-  zoom: 1; }
-  .header:after {
-    display: block;
-    clear: both;
-    content: ''; }
+  box-sizing: border-box;
+  padding: 0 45px; }
+  .header .header-content {
+    max-width: 1440px;
+    min-width: 1200px;
+    zoom: 1;
+    margin: 0 auto; }
+    .header .header-content:after {
+      display: block;
+      clear: both;
+      content: ''; }
   .header .header-logo {
     float: left;
     width: 120px;
@@ -151,13 +195,11 @@ html, body, .box {
     background: url("../images/icon_menu_logo_light.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    margin-top: 20px;
-    margin-left: 132px; }
+    margin-top: 20px; }
   .header .header-title {
     float: right; }
     .header .header-title ul {
       zoom: 1;
-      margin-right: 32px;
       margin-top: 28px; }
       .header .header-title ul:after {
         display: block;
@@ -166,6 +208,8 @@ html, body, .box {
       .header .header-title ul li {
         float: left;
         margin-right: 100px; }
+        .header .header-title ul li:nth-of-type(5) {
+          margin-right: 0; }
         .header .header-title ul li a {
           color: #fff;
           position: relative; }
