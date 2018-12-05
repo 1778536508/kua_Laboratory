@@ -12,27 +12,30 @@
 .home-content {
   width: 100%;
   @include pos(relative);
-  position: relative;
+  @include clearfix;
   .home-content-background {
-    @include pos();
-    left: 0;
-    top: 0;
+    //@include pos();
+    //left: 0;
+    //top: 0;
     width: 100%;
-    //height: 1000px;
+    height: 737px;
     overflow: hidden;
     img {
       display: block;
       width: 100%;
+      height: 100%;
       animation:maxismin 50s linear forwards;
     }
   }
   .home-view {
     @include pos();
-    transform: translateX(234px);
-    animation: myfirst 2s;
+    bottom: 200px;
+    left: 234px;
+    //transform: translateX(234px);
+    animation: myright 2s;
     .home-title {
       box-sizing: border-box;
-      margin-top: 381px;
+      //margin-top: 381px;
       //width: 245px;
       height: 89px;
       color: #fff;
@@ -51,9 +54,183 @@
   .home-right {
     @include pos();
     right: 350px;
-    top: 600px;
+    bottom: 240px;
     color: #fff;
     animation: myleft 2s;
 
+  }
+}
+.home-list {
+  opacity: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 80px 0 156px;
+  .home-list-pase {
+    width: 100%;
+    min-width: 1200px;
+    margin: 0 auto;
+    @include clearfix;
+    &>li {
+      float: left;
+      width: 33.3%;
+      @include pos(relative);
+      .home-list-img {
+        width: 384px;
+        height: 180px;
+        margin: 0 auto;
+        @include pos(relative);
+        .home-list-pics {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          img {
+            display: block;
+            width: 100%;
+          }
+        }
+        .home-list-txt {
+          width: 324px;
+          height: 112px;
+          @include pos();
+          top: 139px;
+          right: 0;
+          background: #fff;
+          ul {
+            width: 100%;
+            height: 100%;
+            @include clearfix;
+            li {
+              float: left;
+              margin-top: 24px;
+              p{
+                font-weight: 400;
+              }
+              &:nth-of-type(1) {
+                width: 32px;
+                margin-left: 32px;
+                p{
+                  font-size: 24px;
+                  color: rgba(173,173,173,1);
+                  line-height: 32px;
+                }
+              }
+              &:nth-of-type(2) {
+                width: 196px;
+                margin-left: 31px;
+                p{
+                  font-size: 14px;
+                  color: #000000;
+                  line-height: 32px;
+                }
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.home-type {
+  width: 100%;
+  ul {
+    width: 100%;
+    li {
+      width: 100%;
+      @include pos(relative);
+      .home-type-img {
+        width: 100%;
+        min-width: 1200px;
+        height: 800px;
+        overflow: hidden;
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+      .home-type-txt {
+        width: 472px;
+        height: 359px;
+        background: #fff;
+        @include pos();
+        //left: 132px;
+        left: -472px;
+        top: 100px;
+        box-sizing: border-box;
+        padding-left: 60px;
+        h3{
+          font-size: 80px;
+          color: #103DEF;
+          line-height: 80px;
+          margin-top: 36px;
+        }
+        p {
+          opacity: 0.56;
+          font-size: 22px;
+          color: #000000;
+          letter-spacing: 0;
+          line-height: 34px;
+          &:nth-of-type(1) {
+            opacity: 1;
+            font-size: 32px;
+            color: #000000;
+            letter-spacing: 0;
+            line-height: 32px;
+            margin-top: 53px;
+            margin-bottom: 32px;
+          }
+
+        }
+      }
+    }
+  }
+}
+.home-cooperation {
+  width: 100%;
+  padding: 48px 132px;
+  box-sizing: border-box;
+  &>div {
+    width: 100%;
+    height: 172px;
+    border-radius: 14px;
+    background: #000000;
+    ul {
+      width: 100%;
+      height: 100%;
+      @include pos(relative);
+      li {
+        height: 100%;
+        line-height: 172px;
+        color: #fff;
+        span {
+          font-size: 40px;
+          color: #FFFFFF;
+          letter-spacing: 0;
+          line-height: 32px;
+        }
+        a {
+          display: block;
+          width: 148px;
+          height: 56px;
+          background: #103DFF;
+          font-size: 20px;
+          color: #FFFFFF;
+          letter-spacing: 0;
+          text-align: right;
+          line-height: 20px;
+          margin-top: 48px;
+          text-align: center;
+          line-height: 48px;
+        }
+      }
+      .home-cooperation-name {
+        @include pos();
+        left: -320px;
+      }
+      .home-cooperation-btn {
+        @include pos();
+        right: -320px;
+      }
+    }
   }
 }
