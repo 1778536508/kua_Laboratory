@@ -332,6 +332,22 @@
               }
             }
           }
+          &:nth-of-type(even) {
+            li {
+              &:nth-of-type(odd) {
+                width: 60%;
+                padding-right: 72px;
+                .Incubator-nov-img-title {
+                  //width: calc(100% - 72px);
+                  padding-right: 96px;
+                }
+              }
+              &:nth-of-type(even) {
+                width: 40%;
+                padding-left: 0;
+              }
+            }
+          }
         }
         .Incubator-nov-img-buttom {
           width: 100%;

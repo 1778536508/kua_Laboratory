@@ -377,6 +377,14 @@ html, body, .box {
                   letter-spacing: 0;
                   line-height: 14px;
                   margin-top: 18px; }
+          .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul:nth-of-type(even) li:nth-of-type(odd) {
+            width: 60%;
+            padding-right: 72px; }
+            .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul:nth-of-type(even) li:nth-of-type(odd) .Incubator-nov-img-title {
+              padding-right: 96px; }
+          .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul:nth-of-type(even) li:nth-of-type(even) {
+            width: 40%;
+            padding-left: 0; }
         .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img .Incubator-nov-img-buttom {
           width: 100%;
           text-align: center; }
