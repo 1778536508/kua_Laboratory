@@ -1,0 +1,392 @@
+@charset "UTF-8";
+/**
+  显示
+ */
+@keyframes boxShow {
+  from {
+    opacity: 0;
+    background: #fff; }
+  to {
+    opacity: 1; } }
+/**
+ 背景图片放大循环动画
+ */
+@-webkit-keyframes maxismin {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.5); }
+  100% {
+    transform: scale(2); } }
+/**
+文字向右移动动画
+ */
+@keyframes myfirst {
+  from {
+    transform: translateX(-400px); }
+  to {
+    transform: translateX(234px); } }
+/**
+文字向右移动
+ */
+@keyframes myright {
+  from {
+    margin-left: -300px; }
+  to {
+    margin-left: 0; } }
+/**
+文字向左移动动画
+ */
+@keyframes myleft {
+  from {
+    right: -300px; }
+  to {
+    right: 0; } }
+@keyframes mywidth {
+  from {
+    width: 0; }
+  to {
+    width: 500px; } }
+@keyframes myantion {
+  0% {
+    width: 0;
+    left: 0; }
+  50% {
+    width: 500px;
+    left: 0; }
+  100% {
+    width: 500px;
+    left: 600px; } }
+@keyframes mywidth1 {
+  from {
+    width: 0; }
+  to {
+    width: 400px; } }
+@keyframes myantion1 {
+  0% {
+    width: 0;
+    left: 0; }
+  50% {
+    width: 100%;
+    left: 0; }
+  100% {
+    width: 400px;
+    left: 100%; } }
+@keyframes mywidth2 {
+  from {
+    width: 0; }
+  to {
+    width: 290px; } }
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body, .box, .Incubator-content .Incubator-content-list ul, .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul li .Incubator-nov-img-img {
+  width: 100%;
+  height: 100%; }
+
+html {
+  box-sizing: border-box;
+  animation: boxShow .5s linear forwards; }
+
+html, body, .box {
+  margin: 0 auto;
+  min-width: 1200px;
+  position: relative; }
+
+.Incubator-box {
+  width: 100%;
+  height: 100%;
+  min-width: 1200px;
+  zoom: 1; }
+  .Incubator-box:after {
+    display: block;
+    clear: both;
+    content: ''; }
+
+.Incubator-content {
+  width: 100%;
+  min-width: 1200px;
+  margin: 0 auto; }
+  .Incubator-content .Incubator-content-title {
+    width: 800px;
+    height: 448px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 174px; }
+    .Incubator-content .Incubator-content-title h2 {
+      font-family: Sansation-Regular;
+      font-size: 60px;
+      color: #000000;
+      letter-spacing: 0; }
+    .Incubator-content .Incubator-content-title ul {
+      width: 100%;
+      zoom: 1; }
+      .Incubator-content .Incubator-content-title ul:after {
+        display: block;
+        clear: both;
+        content: ''; }
+      .Incubator-content .Incubator-content-title ul li {
+        float: left; }
+        .Incubator-content .Incubator-content-title ul li p {
+          font-family: PingFangSC-Regular;
+          font-size: 18px;
+          color: #000000;
+          letter-spacing: 0;
+          line-height: 32px; }
+        .Incubator-content .Incubator-content-title ul li:nth-of-type(2) {
+          float: right; }
+          .Incubator-content .Incubator-content-title ul li:nth-of-type(2) a {
+            display: block;
+            width: 120px;
+            height: 50px;
+            background: #103DFF;
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+            font-weight: 300; }
+  .Incubator-content .Incubator-content-list {
+    width: 100%;
+    height: 400px;
+    background: #000; }
+    .Incubator-content .Incubator-content-list ul {
+      zoom: 1; }
+      .Incubator-content .Incubator-content-list ul:after {
+        display: block;
+        clear: both;
+        content: ''; }
+      .Incubator-content .Incubator-content-list ul li {
+        float: left;
+        width: 20%;
+        height: 100%;
+        box-sizing: border-box;
+        padding-top: 70px;
+        padding-left: 56px;
+        background-image: linear-gradient(-127deg, #292929 0%, #000000 100%);
+        position: relative;
+        cursor: pointer; }
+        .Incubator-content .Incubator-content-list ul li.active:after {
+          z-index: 1;
+          content: '';
+          width: 0;
+          height: 0;
+          border-width: 0 15px 15px;
+          border-style: solid;
+          border-color: transparent transparent  #F8F8F8;
+          /*透明 透明  灰*/
+          margin: 40px auto;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto; }
+        .Incubator-content .Incubator-content-list ul li span {
+          display: block;
+          height: 38px; }
+        .Incubator-content .Incubator-content-list ul li:nth-of-type(1) span {
+          background: url("../images/icon_kplustitle_1.png") no-repeat;
+          background-size: auto 100%; }
+        .Incubator-content .Incubator-content-list ul li:nth-of-type(2) span {
+          background: url("../images/icon_kplustitle_2.png") no-repeat;
+          background-size: auto 100%; }
+        .Incubator-content .Incubator-content-list ul li:nth-of-type(3) span {
+          background: url("../images/icon_kplustitle_3.png") no-repeat;
+          background-size: auto 100%; }
+        .Incubator-content .Incubator-content-list ul li:nth-of-type(4) span {
+          background: url("../images/icon_kplustitle_4.png") no-repeat;
+          background-size: auto 100%; }
+        .Incubator-content .Incubator-content-list ul li:nth-of-type(5) span {
+          background: url("../images/icon_kplustitle_5.png") no-repeat;
+          background-size: auto 100%; }
+        .Incubator-content .Incubator-content-list ul li h2 {
+          opacity: 0.64;
+          font-family: PingFangSC-Regular;
+          font-size: 24px;
+          color: #FFFFFF;
+          letter-spacing: 0;
+          line-height: 24px;
+          margin-top: 32px; }
+  .Incubator-content .Incubator-logo {
+    width: 100%;
+    box-sizing: border-box;
+    background: #F8F8F8; }
+    .Incubator-content .Incubator-logo .Incubator-content-list-logo {
+      max-width: 1440px;
+      min-width: 1200px;
+      box-sizing: border-box;
+      padding: 100px 45px;
+      margin: 0 auto; }
+      .Incubator-content .Incubator-logo .Incubator-content-list-logo .swiper-container {
+        width: 100%; }
+        .Incubator-content .Incubator-logo .Incubator-content-list-logo .swiper-container .swiper-wrapper {
+          width: 100%; }
+          .Incubator-content .Incubator-logo .Incubator-content-list-logo .swiper-container .swiper-wrapper .swiper-slide {
+            width: 100%; }
+            .Incubator-content .Incubator-logo .Incubator-content-list-logo .swiper-container .swiper-wrapper .swiper-slide > div {
+              width: 162px;
+              height: 84px;
+              margin: 0 auto;
+              background: #fff;
+              position: relative; }
+              .Incubator-content .Incubator-logo .Incubator-content-list-logo .swiper-container .swiper-wrapper .swiper-slide > div img {
+                display: block;
+                width: 113px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                top: 0;
+                margin: auto; }
+            .Incubator-content .Incubator-logo .Incubator-content-list-logo .swiper-container .swiper-wrapper .swiper-slide p {
+              text-align: center;
+              opacity: 0.56;
+              font-family: PingFangSC-Regular;
+              font-size: 14px;
+              color: #000000;
+              letter-spacing: 0;
+              text-align: center;
+              line-height: 14px;
+              text-align: center;
+              margin-top: 24px; }
+  .Incubator-content .Incubator-swiper {
+    overflow: hidden;
+    width: 100%;
+    background: #000;
+    padding: 100px 0; }
+    .Incubator-content .Incubator-swiper .Incubator-content-list-swiper {
+      max-width: 1440px;
+      min-width: 1200px;
+      padding: 0 45px;
+      margin: 0 auto; }
+      .Incubator-content .Incubator-swiper .Incubator-content-list-swiper .swiper-container-content {
+        width: 100%; }
+        .Incubator-content .Incubator-swiper .Incubator-content-list-swiper .swiper-container-content .swiper-wrapper {
+          width: 100%; }
+          .Incubator-content .Incubator-swiper .Incubator-content-list-swiper .swiper-container-content .swiper-wrapper .swiper-slide {
+            width: 100%;
+            position: relative; }
+            .Incubator-content .Incubator-swiper .Incubator-content-list-swiper .swiper-container-content .swiper-wrapper .swiper-slide > div {
+              width: 100%;
+              height: 100%;
+              box-sizing: border-box;
+              padding-right: 120px; }
+              .Incubator-content .Incubator-swiper .Incubator-content-list-swiper .swiper-container-content .swiper-wrapper .swiper-slide > div img {
+                display: block;
+                width: 100%; }
+            .Incubator-content .Incubator-swiper .Incubator-content-list-swiper .swiper-container-content .swiper-wrapper .swiper-slide p {
+              opacity: 0.56;
+              font-family: Sansation-Regular;
+              font-size: 32px;
+              color: #FFFFFF;
+              letter-spacing: 0;
+              line-height: 32px;
+              position: absolute;
+              left: -40px;
+              top: 80px;
+              z-index: 1; }
+            .Incubator-content .Incubator-swiper .Incubator-content-list-swiper .swiper-container-content .swiper-wrapper .swiper-slide h2 {
+              font-family: PingFangSC-Regular;
+              font-size: 32px;
+              color: #FFFFFF;
+              letter-spacing: 0;
+              line-height: 40px;
+              position: absolute;
+              left: -40px;
+              top: 140px;
+              z-index: 1; }
+  .Incubator-content .Incubator-nov {
+    width: 100%;
+    background: white; }
+    .Incubator-content .Incubator-nov .Incubator-nov-content {
+      max-width: 1440px;
+      min-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 45px; }
+      .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-list {
+        width: 100%; }
+        .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-list ul {
+          width: 100%;
+          zoom: 1;
+          margin-bottom: 48px; }
+          .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-list ul:after {
+            display: block;
+            clear: both;
+            content: ''; }
+          .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-list ul li {
+            float: left;
+            margin-right: 40px; }
+            .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-list ul li a {
+              opacity: 0.48;
+              font-family: PingFangSC-Regular;
+              font-size: 14px;
+              color: #000000;
+              letter-spacing: 0;
+              line-height: 14px; }
+            .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-list ul li a:hover {
+              opacity: 1; }
+            .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-list ul li.active a {
+              opacity: 1; }
+      .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img {
+        width: 100%; }
+        .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul {
+          width: 100%; }
+          .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul li {
+            margin-bottom: 158px;
+            height: 310px;
+            float: left;
+            position: relative;
+            box-sizing: border-box; }
+            .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul li:nth-of-type(odd) {
+              width: 40%; }
+            .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul li:nth-of-type(even) {
+              width: 60%;
+              padding-left: 72px; }
+              .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul li:nth-of-type(even) .Incubator-nov-img-title {
+                padding-right: 96px; }
+            .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul li .Incubator-nov-img-img {
+              overflow: hidden; }
+              .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul li .Incubator-nov-img-img img {
+                display: block;
+                width: 100%; }
+            .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul li .Incubator-nov-img-title {
+              width: 100%;
+              position: absolute;
+              bottom: -86px;
+              z-index: 1;
+              box-sizing: border-box;
+              padding: 0 24px; }
+              .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul li .Incubator-nov-img-title .Incubator-nov-img-text {
+                width: 100%;
+                height: 130px;
+                background: #FFFFFF;
+                box-shadow: 0 16px 46px 0 rgba(0, 0, 0, 0.04);
+                padding-left: 24px;
+                padding-top: 32px;
+                box-sizing: border-box; }
+                .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul li .Incubator-nov-img-title .Incubator-nov-img-text h2 {
+                  opacity: 0.32;
+                  font-family: Sansation-Regular;
+                  font-size: 24px;
+                  color: #000000;
+                  letter-spacing: 0;
+                  line-height: 24px; }
+                .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul li .Incubator-nov-img-title .Incubator-nov-img-text p {
+                  font-family: Sansation-Regular;
+                  font-size: 14px;
+                  color: #000000;
+                  letter-spacing: 0;
+                  line-height: 14px;
+                  margin-top: 18px; }
+        .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img .Incubator-nov-img-buttom {
+          width: 100%;
+          text-align: center; }
+          .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img .Incubator-nov-img-buttom a {
+            font-family: PingFangSC-Regular;
+            font-size: 14px;
+            color: #000000;
+            letter-spacing: 0;
+            line-height: 14px; }
+          .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img .Incubator-nov-img-buttom a:hover {
+            text-decoration: underline; }
+
+/*# sourceMappingURL=Incubator.css.map */

@@ -23,7 +23,7 @@
   .example-banner {
     width: 100%;
     box-sizing: border-box;
-    padding: 137px 0 172px;
+    padding: 137px 0 97px 0;
     .swiper-container {
       width: 100%;
       @include pos(relative);
@@ -34,11 +34,47 @@
           height: 600px;
           overflow: hidden;
           box-sizing: border-box;
+          @include pos(relative);
           padding-right: 256px;
           img{
             display: block;
             width: 100%;
             min-height: 600px;
+          }
+          .swiper-txt-box {
+            width: 418px;
+            height: 262px;
+            text-align: center;
+            box-shadow: 0 16px 46px 0 rgba(0,0,0,0.04);
+            @include pos();
+            top: 50%;
+            margin-top: -131px;
+            right: 132px;
+            z-index: 1;
+            background: #FFFFFF;
+            h3{
+              font-size: 40px;
+              color: #000000;
+              letter-spacing: 0;
+              line-height: 40px;
+              text-align: center;
+              margin-top: 62px;
+              margin-bottom: 32px;
+            }
+            p {
+              font-size: 18px;
+              color: #000000;
+              letter-spacing: 0;
+              line-height: 18px;
+              &:nth-of-type(1) {
+                opacity: 0.56;
+                font-size: 22px;
+                color: #000000;
+                letter-spacing: 0;
+                line-height: 22px;
+                margin-bottom: 46px;
+              }
+            }
           }
         }
       }
@@ -79,10 +115,150 @@
         width: 300px;
         text-align: left;
         left: 132px;
+        font-weight: bold;
       }
 
     }
 
   }
+
+
+
+
+
+  .example-list-type {
+    width: 100%;
+    background: #F8F8F8;
+    box-sizing: border-box;
+    padding-top: 100px;
+    .example-list-type-box {
+      width: 100%;
+      max-width: 1440px;
+      min-width: 1200px;
+      margin: 0 auto;
+      overflow: hidden;
+      .example-list-type-box-childer {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 45px;
+        @include clearfix;
+        &>div {
+          float: left;
+          box-sizing: border-box;
+        }
+        .example-list-type-text {
+          width: 20%;
+          text-align: left;
+          ul {
+            width: 100%;
+            margin-bottom: 40px;
+            &:nth-of-type(1) {
+              margin-bottom: 0;
+            }
+            li {
+              width: 100%;
+              margin-bottom: 16px;
+              a {
+                opacity: 0.48;
+                font-family: PingFangSC-Regular;
+                font-size: 14px;
+                color: #000000;
+                letter-spacing: 0;
+                line-height: 14px;
+                transition: all .5s;
+              }
+              a:hover {
+                opacity:1;
+                transition: all .5s;
+              }
+              &.active {
+                a {
+                  opacity:1;
+                  transition: all .5s;
+                }
+              }
+            }
+          }
+        }
+        .example-list-type-iamges {
+          width: 80%;
+          ul {
+            width: 100%;
+            @include clearfix;
+            li {
+              float: left;
+              width: 50%;
+              box-sizing: border-box;
+              padding-left: 86px;
+              @include pos(relative);
+              margin-bottom: 86px;
+              img {
+                display: block;
+                width: 100%;
+              }
+              .example-list-type-iamges-text {
+                width: 204px;
+                height: 130px;
+                background: #fff;
+                text-align: center;
+                @include pos();
+                top: 50%;
+                margin-top: -65px;
+                left: 46px;
+                z-index: 1;
+                h3 {
+                  font-family: PingFangSC-Regular;
+                  font-size: 20px;
+                  color: #000000;
+                  letter-spacing: 0;
+                  line-height: 20px;
+                  text-align: center;
+                  margin-top: 38px;
+                }
+                p{
+                  font-family: PingFangSC-Regular;
+                  font-size: 14px;
+                  color: #000000;
+                  letter-spacing: 0;
+                  line-height: 14px;
+                  text-align: center;
+                  margin-top: 20px;
+                }
+              }
+            }
+          }
+          .example-list-type-buttn {
+            display: block;
+            width: 100%;
+            text-align: center;
+
+            padding-bottom: 80px;
+            margin-top: -6px;
+            a {
+              font-family: PingFangSC-Regular;
+              font-size: 14px;
+              color: #000000;
+              letter-spacing: 0;
+              line-height: 14px;
+            }
+            a:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
 }
 

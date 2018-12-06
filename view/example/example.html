@@ -21,9 +21,30 @@
         <div class="example-banner">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="../../assets/images/img_product_1.png" alt=""></div>
-                    <div class="swiper-slide"><img src="../../assets/images/img_product_2.png" alt=""></div>
-                    <div class="swiper-slide"><img src="../../assets/images/img_product_3.png" alt=""></div>
+                    <div class="swiper-slide">
+                        <img src="../../assets/images/img_product_1.png" alt="">
+                        <div class="swiper-txt-box">
+                            <h3>风物发现官</h3>
+                            <p>Discovery Officer</p>
+                            <p>中国新风物文化引领者</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../assets/images/img_product_2.png" alt="">
+                        <div class="swiper-txt-box">
+                            <h3>风物发现官</h3>
+                            <p>Discovery Officer</p>
+                            <p>中国新风物文化引领者</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../assets/images/img_product_3.png" alt="">
+                        <div class="swiper-txt-box">
+                            <h3>风物发现官</h3>
+                            <p>Discovery Officer</p>
+                            <p>中国新风物文化引领者</p>
+                        </div>
+                    </div>
                 </div>
                 <!--左右切换-->
                 <div class="swiper-button-box">
@@ -32,8 +53,86 @@
                 </div>
                 <!--分页-->
                 <div class="swiper-pagination"></div>
-
-
+            </div>
+        </div>
+        <div class="example-list-type">
+            <div class="example-list-type-box">
+                <div class="example-list-type-box-childer">
+                    <div class="example-list-type-text">
+                        <ul>
+                            <li class="active"><a href="javscript:;">全部</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="javascript:;">自营孵化</a></li>
+                            <li><a href="javascript:;">服务支持</a></li>
+                            <li><a href="javascript:;">创新投资</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="javascript:;">新零售</a></li>
+                            <li><a href="javascript:;">区块链</a></li>
+                            <li><a href="javascript:;">AI智能</a></li>
+                            <li><a href="javascript:;">交通/出行</a></li>
+                            <li><a href="javascript:;">新媒体</a></li>
+                            <li><a href="javascript:;">文化</a></li>
+                            <li><a href="javascript:;">实体经济</a></li>
+                            <li><a href="javascript:;">娱乐</a></li>
+                            <li><a href="javascript:;">其它</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="javascript:;">数字化转型</a></li>
+                            <li><a href="javascript:;">产品设计</a></li>
+                            <li><a href="javascript:;">运营战略</a></li>
+                            <li><a href="javascript:;">体验提升</a></li>
+                        </ul>
+                    </div>
+                    <div class="example-list-type-iamges">
+                        <ul>
+                            <li>
+                                <img src="../../assets/images/img_contact_backgroundimg.png" alt="">
+                                <div class="example-list-type-iamges-text">
+                                    <h3>案例名称</h3>
+                                    <p>产品介绍</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../../assets/images/img_contact_backgroundimg.png" alt="">
+                                <div class="example-list-type-iamges-text">
+                                    <h3>案例名称</h3>
+                                    <p>产品介绍</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../../assets/images/img_contact_backgroundimg.png" alt="">
+                                <div class="example-list-type-iamges-text">
+                                    <h3>案例名称</h3>
+                                    <p>产品介绍</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../../assets/images/img_contact_backgroundimg.png" alt="">
+                                <div class="example-list-type-iamges-text">
+                                    <h3>案例名称</h3>
+                                    <p>产品介绍</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../../assets/images/img_contact_backgroundimg.png" alt="">
+                                <div class="example-list-type-iamges-text">
+                                    <h3>案例名称</h3>
+                                    <p>产品介绍</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../../assets/images/img_contact_backgroundimg.png" alt="">
+                                <div class="example-list-type-iamges-text">
+                                    <h3>案例名称</h3>
+                                    <p>产品介绍</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <p class="example-list-type-buttn"><a href="javascript:;">查看更多</a></p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -47,7 +146,7 @@
         $('#header-title-pics > li:nth-of-type(2)').addClass('active');
         var mySwiper = new Swiper('.swiper-container', {
             loop : true,
-            effect : 'fade',
+            // effect : 'fade',
             autoplay: 30000,//可选选项，自动滑动
             prevButton:'.swiper-button-prev',
             nextButton:'.swiper-button-next',

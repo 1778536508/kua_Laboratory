@@ -9,6 +9,13 @@
     content: '';
   }
 }
+@mixin back_images($url, $w, $h) {
+  background: url($url) no-repeat;
+  background-size: $w $h;
+}
+
+
+
 /**
   显示
  */
