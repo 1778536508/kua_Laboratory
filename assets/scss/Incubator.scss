@@ -10,46 +10,66 @@
   width: 100%;
   min-width: 1200px;
   margin: 0 auto;
-  .Incubator-content-title {
-    width: 800px;
-    height: 448px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    padding-top: 174px;
-    h2 {
-      font-family: Sansation-Regular;
-      font-size: 60px;
-      color: #000000;
-      letter-spacing: 0;
-    }
-    ul {
-      width: 100%;
-      @include clearfix;
-      li {
-        float: left;
-        p {
-          font-family: PingFangSC-Regular;
-          font-size: 18px;
-          color: #000000;
-          letter-spacing: 0;
-          line-height: 32px;
-        }
-        &:nth-of-type(2){
-          float: right;
-          a {
-            display: block;
-            width: 120px;
-            height: 50px;
-            background: #103DFF;
-            text-align: center;
-            line-height: 50px;
-            color: #fff;
-            font-weight: 300;
-          }
-        }
-      }
-    }
+  .formmode-content-title {
+    @include pos(relative)
   }
+  .formmode-content-title-submit {
+    display: block;
+    width: 120px;
+    height: 50px;
+    background: #103DFF;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-weight: 300;
+    @include pos();
+    z-index: 2;
+    right: 200px;
+    bottom: 0;
+    top: 100px;
+    margin: auto;
+    animation: myleft 2s;
+  }
+  //.Incubator-content-title {
+  //  width: 800px;
+  //  height: 448px;
+  //  margin: 0 auto;
+  //  box-sizing: border-box;
+  //  padding-top: 174px;
+  //  h2 {
+  //    font-family: Sansation-Regular;
+  //    font-size: 60px;
+  //    color: #000000;
+  //    letter-spacing: 0;
+  //  }
+  //  ul {
+  //    width: 100%;
+  //    @include clearfix;
+  //    li {
+  //      float: left;
+  //      p {
+  //        font-family: PingFangSC-Regular;
+  //        font-size: 18px;
+  //        color: #000000;
+  //        letter-spacing: 0;
+  //        line-height: 32px;
+  //      }
+  //      &:nth-of-type(2){
+  //        float: right;
+  //        a {
+  //          display: block;
+  //          width: 120px;
+  //          height: 50px;
+  //          background: #103DFF;
+  //          text-align: center;
+  //          line-height: 50px;
+  //          color: #fff;
+  //          font-weight: 300;
+  //        }
+  //      }
+  //    }
+  //  }
+  //}
   .Incubator-content-list {
     width: 100%;
     height: 400px;

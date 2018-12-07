@@ -39,24 +39,24 @@
  */
 @keyframes myleft {
   from {
-    right: -300px; }
+    right: -400px; }
   to {
-    right: 0; } }
+    right: 200px; } }
 @keyframes mywidth {
   from {
     width: 0; }
   to {
-    width: 500px; } }
+    width: 800px; } }
 @keyframes myantion {
   0% {
     width: 0;
     left: 0; }
   50% {
-    width: 500px;
+    width: 800px;
     left: 0; }
   100% {
-    width: 500px;
-    left: 600px; } }
+    width: 750px;
+    left: 800px; } }
 @keyframes mywidth1 {
   from {
     width: 0; }
@@ -66,7 +66,7 @@
   0% {
     width: 0;
     left: 0; }
-  50% {
+  20% {
     width: 100%;
     left: 0; }
   100% {
@@ -76,7 +76,28 @@
   from {
     width: 0; }
   to {
-    width: 290px; } }
+    width: 360px; } }
+@keyframes maxCase {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.5); } }
+/**
+公共标题
+ */
+@keyframes antionLeft {
+  from {
+    left: 0; }
+  to {
+    left: 800px; } }
+/**
+案例banner标题
+ */
+@keyframes widthAuto {
+  from {
+    left: 0; }
+  to {
+    left: 400px; } }
 * {
   margin: 0;
   padding: 0; }
@@ -93,6 +114,49 @@ html, body, .box {
   margin: 0 auto;
   min-width: 1200px;
   position: relative; }
+
+.formmode-content-title {
+  max-width: 1400px;
+  min-width: 1200px;
+  box-sizing: border-box;
+  padding-left: 120px;
+  margin: 0 auto;
+  padding-top: 174px;
+  padding-bottom: 152px; }
+  .formmode-content-title h2 {
+    font-family: Sansation-Regular;
+    font-size: 60px;
+    color: #000000;
+    letter-spacing: 0;
+    margin-bottom: 23px;
+    position: relative; }
+    .formmode-content-title h2:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      position: absolute;
+      left: 800px;
+      top: 0;
+      z-index: 1;
+      animation: antionLeft 1s ease-in-out; }
+  .formmode-content-title p {
+    font-family: PingFangSC-Regular;
+    font-size: 18px;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: 32px;
+    position: relative; }
+    .formmode-content-title p:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      position: absolute;
+      left: 1000px;
+      top: 0;
+      z-index: 1;
+      animation: antionLeft 1s ease-in-out; }
 
 html, body, .box {
   width: 100%;

@@ -1,0 +1,460 @@
+@charset "utf-8";
+@import "./base";
+.aboutUs-content {
+  width: 100%;
+  overflow: hidden;
+}
+
+.formmode-content-cover {
+  width: 100%;
+  //height: 654px;
+  box-sizing: border-box;
+  padding-right: 132px;
+  margin-bottom: 346px;
+  @include pos(relative);
+  .formmode-content-cover-back {
+    width: 100%;
+    overflow: hidden;
+    //@include back_images("../images/img_about_headerimg.png", 100%, auto)
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .formmode-content-cover-txt {
+    width: 100%;
+    height: 330px;
+    box-sizing: border-box;
+    @include pos();
+    bottom: -266px;
+    left: 0;
+    padding-left: 132px;
+
+    ul {
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      box-shadow: 0 16px 46px 0 rgba(0,0,0,0.04);
+      @include clearfix;
+      box-sizing: border-box;
+      padding-right: 132px;
+      li {
+        float: left;
+        width: 33.3%;
+        box-sizing: border-box;
+        padding: 75px 0 78px;
+        h2 {
+          width: 260px;
+          margin: 0 auto;
+          span:nth-of-type(1) {
+            font-family: DIN-Regular;
+            font-size: 48px;
+            color: #000000;
+            letter-spacing: 0;
+            line-height: 48px;
+          }
+          span:nth-of-type(2) {
+            font-family: PingFangSC-Medium;
+            font-size: 24px;
+            color: #000000;
+            letter-spacing: 0;
+            line-height: 24px;
+          }
+        }
+        p {
+          width: 260px;
+          height: 104px;
+          margin: 0 auto;
+          opacity: 0.32;
+          font-family: PingFangSC-Regular;
+          font-size: 14px;
+          color: #000000;
+          letter-spacing: 0;
+          line-height: 26px;
+          margin-top: 31px;
+        }
+      }
+    }
+  }
+}
+
+
+.formmode-content-banner {
+  animation: boxShow 2s;
+  width: 100%;
+  height: 650px;
+  background: #000;
+  .swiper-container {
+    width: 100%;
+    padding-bottom: 220px;
+    overflow: visible;
+    margin-top: 460px;
+    .swiper-wrapper {
+      padding-top: 1px;
+      width: 100%;
+      .swiper-slide {
+        width: 100%;
+        @include pos(relative);
+        box-sizing: border-box;
+        .swiper-slide-box {
+          width: 100%;
+          @include pos(relative);
+          &:after {
+            content: "";
+            @include pos();
+            width: 100%;
+            height: 100%;
+            background: #000000;
+            left: -1px;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: 9;
+            opacity: .8;
+            transition: all .5s;
+            border: 1px solid rgba(0,0,0,.8);
+          }
+          img{
+            display: block;
+            width:100%;
+            transition: all .5s;
+          }
+        }
+
+        &.active {
+          .swiper-slide-box {
+            transform: scale(1.5);
+            animation: maxCase .5s;
+            &:after {
+              opacity: 0;
+              transition: all .5s;
+            }
+          }
+          .formmode-content-banner-text {
+            opacity: 1;
+            transition: opacity .5s;
+          }
+        }
+        .formmode-content-banner-text {
+          //@include pos();
+          //left: -25%;
+          //bottom: -100%;
+          margin-top: 100px;
+          //margin-left: -120px;
+          width: 1100px;
+          opacity: 0;
+          //transition: opacity .5s;
+          box-sizing: border-box;
+          h2{
+            font-family: PingFangSC-Regular;
+            font-size: 20px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            line-height: 20px;
+            margin-top: 60px;
+            width: 100%;
+            span {
+              opacity: 0.64;
+              font-family: PingFangSC-Regular;
+              font-size: 12px;
+              color: #FFFFFF;
+              letter-spacing: 0;
+              line-height: 12px;
+            }
+          }
+          p:nth-of-type(1) {
+            width: 100%;
+            opacity: 0.88;
+            font-family: PingFangSC-Regular;
+            font-size: 14px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            line-height: 24px;
+            margin-top: 24px;
+          }
+          p:nth-of-type(2) {
+            width: 100%;
+            opacity: 0.88;
+            font-family: PingFangSC-Regular;
+            font-size: 14px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            line-height: 24px;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+.aboutUs-content-image {
+  width: 100%;
+  padding: 100px 0;
+  & > div {
+    margin-bottom: 60px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    .swiper-wrapper {
+      transition-timing-function: linear;
+      margin: 0 auto;
+      div {
+        width: 256px;
+        height: 180px;
+        overflow: hidden;
+        margin: 0 auto;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.aboutUs-content-business {
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 132px;
+  @include pos(relative);
+  .aboutUs-content-business-title {
+    width: 100%;
+    height: 1248px;
+    background: #F8F8F8;
+  }
+  .aboutUs-content-business-text {
+    width: 100%;
+    box-sizing: border-box;
+    @include pos();
+    left: 0;
+    top: 0;
+    padding-left: 132px;
+    h2 {
+      font-family: PingFangSC-Regular;
+      font-size: 24px;
+      color: #000000;
+      letter-spacing: 0;
+      line-height: 24px;
+      padding-top: 90px;
+      padding-bottom: 72px;
+      font-weight: inherit;
+      @include pos(relatve);
+      &:after {
+        content: 'K2 star lab';
+        margin-left: -80px;
+        opacity: 0.03;
+        font-family: Sansation-Bold-Italic;
+        font-size: 52px;
+        color: #000000;
+        letter-spacing: 0;
+        line-height: 52px;
+      }
+    }
+    ul {
+      width: 100%;
+      li {
+        width: 100%;
+        @include clearfix;
+        margin-bottom: 10px;
+        &>div {
+          float: left;
+          height: 320px;
+          &:nth-of-type(1) {
+            width: 368px;
+            background: #fff;
+            @include pos(relative);
+            div {
+              width: 170px;
+              height: 120px;
+              @include pos();
+              left: 0;
+              right: 0;
+              top: 0;
+              bottom: 0;
+              margin: auto;
+              h3 {
+                opacity: 0.32;
+                font-family: PingFangSC-Regular;
+                font-size: 28px;
+                color: #000000;
+                letter-spacing: 0;
+                line-height: 28px;
+                margin-bottom: 36px;
+              }
+              p{
+                font-family: PingFangSC-Regular;
+                font-size: 14px;
+                color: #000000;
+                letter-spacing: 0;
+                line-height: 14px;
+                margin-bottom: 16px;
+                &:last-child{
+                  margin-bottom: 0;
+                }
+              }
+            }
+
+          }
+          &:nth-of-type(2) {
+            width: calc(100% - 368px);
+            overflow: hidden;
+          }
+          img {
+            display: block;
+            width: 100%;
+            min-height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+.aboutUs-content-Culture {
+  width: 100%;
+  box-sizing: border-box;
+  padding:100px 0 100px 132px;
+  background: #fff;
+  .aboutUs-content-Culture-box {
+    width: 100%;
+    min-width: 1200px;
+    @include pos(relative);
+    .aboutUs-content-Culture-backimg {
+      width: 100%;
+      img {
+        width: 100%;
+        min-height: 970px;
+      }
+    }
+    .boutUs-content-Culture-text {
+      width: 100%;
+      @include pos();
+      left: 0;
+      top: 0;
+      h2 {
+        font-family: PingFangSC-Medium;
+        font-size: 24px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        line-height: 24px;
+        font-weight: inherit;
+        padding: 81px 0 91px 120px;
+        &:after {
+          content: "K2 star culture";
+          opacity: 0.13;
+          font-family: Sansation-Bold-Italic;
+          font-size: 52px;
+          color: #FFFFFF;
+          letter-spacing: 0;
+          line-height: 52px;
+          margin-left: -100px;
+
+        }
+      }
+      ul {
+        width: 927px;
+        margin: 0 auto;
+        @include clearfix;
+        li {
+          float: left;
+          width: 364px;
+          height: 234px;
+          box-sizing: border-box;
+          padding: 64px 0 0 76px;
+          background: #fff;
+          margin-bottom: 100px;
+          &:nth-of-type(odd) {
+            margin-right: 100px;
+          }
+          div {
+            h3 {
+              font-family: PingFangSC-Medium;
+              font-size: 32px;
+              color: #000000;
+              letter-spacing: 0;
+              line-height: 32px;
+            }
+            p {
+              opacity: 0.4;
+              font-family: Sansation-Regular;
+              font-size: 22px;
+              color: #000000;
+              letter-spacing: 0;
+              line-height: 22px;
+              margin-top: 48px;
+            }
+          }
+        }
+      }
+      .boutUs-content-Culture-loding {
+        width: 100%;
+        text-align: center;
+        a {
+          font-family: PingFangSC-Regular;
+          font-size: 22px;
+          color: #FFFFFF;
+          letter-spacing: 0;
+          text-align: center;
+          line-height: 22px;
+          @include pos(relative);
+          i {
+            display: block;
+            width: 23px;
+            height: 10px;
+            @include back_images("../images/icon_header_enter.png", 100%, 100%);
+            @include pos();
+            right: -30px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+          }
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+.aboutUs-content-exhibition {
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 132px;
+  margin-bottom: 100px;
+  ul {
+    width: 100%;
+    @include clearfix;
+    li {
+      width: 33.3%;
+      float: left;
+      @include pos(relative);
+      cursor: pointer;
+      overflow: hidden;
+      &:hover {
+        &:after {
+          opacity: 0;
+          transition: all .5s;
+        }
+      }
+      &:after {
+        content: "";
+        width: 110%;
+        height: 110%;
+        background: #000;
+        opacity: .5;
+        @include pos();
+        left: -5px;
+        top: -5px;
+        transition: all .5s;
+      }
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}

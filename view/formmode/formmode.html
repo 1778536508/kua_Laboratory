@@ -262,6 +262,9 @@
 <script>
     $(document).ready(function () {
         $('#header-title-pics > li:nth-of-type(4)').addClass('active');
+        $(".formmode-content-joinus-list li").click(function () {
+            $(this).addClass('active').siblings().removeClass('active');
+        })
     })
 
 </script>

@@ -9,29 +9,29 @@
 .formmode-content {
   width: 100%;
   background: #fff;
-  .formmode-content-title {
-    max-width: 1400px;
-    min-width: 1200px;
-    box-sizing: border-box;
-    padding-left: 120px;
-    margin: 0 auto;
-    padding-top: 174px;
-    padding-bottom: 152px;
-    h2 {
-      font-family: Sansation-Regular;
-      font-size: 60px;
-      color: #000000;
-      letter-spacing: 0;
-    }
-    p {
-      font-family: PingFangSC-Regular;
-      font-size: 18px;
-      color: #000000;
-      letter-spacing: 0;
-      line-height: 32px;
-      margin-top: 23px;
-    }
-  }
+  //.formmode-content-title {
+  //  max-width: 1400px;
+  //  min-width: 1200px;
+  //  box-sizing: border-box;
+  //  padding-left: 120px;
+  //  margin: 0 auto;
+  //  padding-top: 174px;
+  //  padding-bottom: 152px;
+  //  h2 {
+  //    font-family: Sansation-Regular;
+  //    font-size: 60px;
+  //    color: #000000;
+  //    letter-spacing: 0;
+  //  }
+  //  p {
+  //    font-family: PingFangSC-Regular;
+  //    font-size: 18px;
+  //    color: #000000;
+  //    letter-spacing: 0;
+  //    line-height: 32px;
+  //    margin-top: 23px;
+  //  }
+  //}
   .formmode-content-programme-title {
     width: 100%;
     background: #F8F8F8;
@@ -239,6 +239,11 @@
               letter-spacing: 0;
               line-height: 18px;
               font-weight: 100;
+              transition: all .5s;
+            }
+            a:hover {
+              opacity: 1;
+              transition: all .5s;
             }
             &.active {
               a {

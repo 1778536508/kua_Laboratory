@@ -21,6 +21,16 @@
   margin: 0 auto;
   padding: 0 45px;
 }
+@mixin afterName($w, $h, $left, $top, $color, $content) {
+  content: $content;
+  @include pos();
+  left: $left;
+  top: $top;
+  width: $w;
+  height: $h;
+  background: $color;
+  z-index: 1;
+}
 
 
 
@@ -69,13 +79,13 @@
  */
 @keyframes myleft
 {
-  from {right: -300px;}
-  to {right: 0;}
+  from {right: -400px;}
+  to {right: 200px;}
 }
 
 @keyframes mywidth {
   from {width: 0;}
-  to {width: 500px;}
+  to {width: 800px;}
 }
 
 @keyframes myantion {
@@ -84,12 +94,12 @@
     left: 0;
   }
   50%{
-    width: 500px;
+    width: 800px;
     left: 0;
   }
   100%{
-    width: 500px;
-    left: 600px;
+    width: 750px;
+    left: 800px;
   }
 }
 
@@ -103,7 +113,7 @@
     width: 0;
     left: 0;
   }
-  50%{
+  20%{
     width: 100%;
     left: 0;
   }
@@ -114,8 +124,43 @@
 }
 @keyframes mywidth2 {
   from {width: 0;}
-  to {width: 290px;}
+  to {width: 360px;}
 }
+// swiper  变大
+@keyframes maxCase
+{
+  from {transform: scale(1)}
+  to {transform: scale(1.5)}
+}
+/**
+公共标题
+ */
+@keyframes antionLeft
+{
+  from {left: 0;}
+  to {left: 800px;}
+}
+
+/**
+案例banner标题
+ */
+
+@keyframes widthAuto {
+  from {left: 0;}
+  to {left: 400px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -137,6 +182,54 @@ html,body,.box{
   margin: 0 auto;
   min-width: 1200px;
   @include pos(relative);
+}
+.formmode-content-title {
+  max-width: 1400px;
+  min-width: 1200px;
+  box-sizing: border-box;
+  padding-left: 120px;
+  margin: 0 auto;
+  padding-top: 174px;
+  padding-bottom: 152px;
+  h2 {
+    font-family: Sansation-Regular;
+    font-size: 60px;
+    color: #000000;
+    letter-spacing: 0;
+    margin-bottom: 23px;
+    @include pos(relative);
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      @include pos();
+      left: 800px;
+      top: 0;
+      z-index: 1;
+      animation: antionLeft 1s ease-in-out;
+    }
+  }
+  p {
+    font-family: PingFangSC-Regular;
+    font-size: 18px;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: 32px;
+    //margin-top: 23px;
+    @include pos(relative);
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      @include pos();
+      left: 1000px;
+      top: 0;
+      z-index: 1;
+      animation: antionLeft 1s ease-in-out;
+    }
+  }
 }
 
 
