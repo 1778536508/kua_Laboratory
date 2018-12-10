@@ -1,12 +1,5 @@
 
 $(document).ready(function(){
-    // alert($(window).scrollTop())
-    // switch ($(window).scrollTop()) {
-    //     case 150:
-    //
-    //         $("#home-list").animate({opacity: '1', animation: 'all 0.5s'});
-    //         break;
-    // }
     $(window).scroll(function () {
         console.log($(window).scrollTop());
         if ($(window).scrollTop() > 100) {

@@ -200,13 +200,59 @@
     .swiper-wrapper {
       transition-timing-function: linear;
       margin: 0 auto;
-      div {
-        width: 256px;
-        height: 180px;
+      & > div {
+        width: 100%;
         overflow: hidden;
         margin: 0 auto;
+        box-sizing: border-box;
+        padding: 0 30px;
+        @include pos(relative);
         img {
+          display: block;
+          //width: 236px;
           width: 100%;
+        }
+        .swiper-slide-txt {
+          opacity: 0;
+          transition: all .5s;
+          @include pos();
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+          @extend %full;
+          box-sizing: border-box;
+          padding: 0 30px;
+          &>div {
+            @extend %full;
+            padding: 47px 0 0 48px;
+            background: #F8F8F8;
+            box-sizing: border-box;
+          }
+          h2 {
+            font-family: Sansation-Regular;
+            font-size: 20px;
+            color: #000000;
+            letter-spacing: 0;
+            line-height: 20px;
+
+          }
+          p {
+            opacity: 0.64;
+            font-family: PingFangSC-Regular;
+            font-size: 12px;
+            color: #000000;
+            letter-spacing: 0;
+            line-height: 12px;
+            margin-top: 53px;
+          }
+        }
+        &:hover {
+          .swiper-slide-txt {
+            opacity: 1;
+            transition: all .5s;
+          }
         }
       }
     }
@@ -328,12 +374,29 @@
         width: 100%;
         min-height: 970px;
       }
+      @include pos(relative);
+      &:after {
+        content: "";
+        @include pos();
+        left: 0;
+        top: 0;
+        @extend %full;
+        background: #fff;
+        z-index: 1;
+      }
+      &.active {
+        &:after {
+          left: 100%;
+          animation: backLeft .8s;
+        }
+      }
     }
     .boutUs-content-Culture-text {
       width: 100%;
       @include pos();
       left: 0;
       top: 0;
+      z-index: 2;
       h2 {
         font-family: PingFangSC-Medium;
         font-size: 24px;
@@ -351,7 +414,6 @@
           letter-spacing: 0;
           line-height: 52px;
           margin-left: -100px;
-
         }
       }
       ul {
@@ -366,10 +428,32 @@
           padding: 64px 0 0 76px;
           background: #fff;
           margin-bottom: 100px;
+          overflow: hidden;
+          opacity: 0;
+          &.active {
+            opacity: 1;
+            transition: all .5s;
+          }
           &:nth-of-type(odd) {
             margin-right: 100px;
           }
           div {
+            @include pos(relative);
+            &:after {
+              content: "";
+              @include pos();
+              left: 0;
+              top: 0;
+              @extend %full;
+              background: #fff;
+              z-index: 1;
+            }
+            &.active {
+              &:after {
+                left: 100%;
+                animation: backLeft .8s;
+              }
+            }
             h3 {
               font-family: PingFangSC-Medium;
               font-size: 32px;
@@ -386,6 +470,7 @@
               line-height: 22px;
               margin-top: 48px;
             }
+
           }
         }
       }

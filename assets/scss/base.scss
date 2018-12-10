@@ -152,16 +152,30 @@
 
 
 
+/**
+案例 list
+ */
+@keyframes activeTop {
+  from {top: 0;}
+  to {top: -100%;}
+}
+@keyframes boxLeft {
+  from {left: -210px;}
+  to {left: 46px;}
+}
+@keyframes txtLeft {
+  from {left: 0;}
+  to {left: 100%;}
+}
 
 
-
-
-
-
-
-
-
-
+/*
+K + 孵化器
+ */
+@keyframes backLeft {
+  from {left: 0;}
+  to {left: 100%;}
+}
 
 
 
@@ -232,6 +246,19 @@ html,body,.box{
     }
   }
 }
+
+
+//回到顶部
+//.scrolltopWeb {
+//  @include pos(fixed);
+//  width: 7px;
+//  height: 62px;
+//  @include back_images("../images/icon_footer_backtotop.png", 100%, 100%);
+//  right: 158.4px;
+//  bottom: 232px;
+//  box-shadow: 1px 1px 5px #000;
+//  z-index: 9;
+//}
 
 
 

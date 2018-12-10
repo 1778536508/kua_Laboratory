@@ -31,46 +31,6 @@
     margin: auto;
     animation: myleft 2s;
   }
-  //.Incubator-content-title {
-  //  width: 800px;
-  //  height: 448px;
-  //  margin: 0 auto;
-  //  box-sizing: border-box;
-  //  padding-top: 174px;
-  //  h2 {
-  //    font-family: Sansation-Regular;
-  //    font-size: 60px;
-  //    color: #000000;
-  //    letter-spacing: 0;
-  //  }
-  //  ul {
-  //    width: 100%;
-  //    @include clearfix;
-  //    li {
-  //      float: left;
-  //      p {
-  //        font-family: PingFangSC-Regular;
-  //        font-size: 18px;
-  //        color: #000000;
-  //        letter-spacing: 0;
-  //        line-height: 32px;
-  //      }
-  //      &:nth-of-type(2){
-  //        float: right;
-  //        a {
-  //          display: block;
-  //          width: 120px;
-  //          height: 50px;
-  //          background: #103DFF;
-  //          text-align: center;
-  //          line-height: 50px;
-  //          color: #fff;
-  //          font-weight: 300;
-  //        }
-  //      }
-  //    }
-  //  }
-  //}
   .Incubator-content-list {
     width: 100%;
     height: 400px;
@@ -313,6 +273,21 @@
             .Incubator-nov-img-img {
               @extend %full;
               overflow: hidden;
+              @include pos(relative);
+              &:after {
+                content: "";
+                @include pos();
+                left: 0;
+                top: 0;
+                @extend %full;
+                background: #fff;
+              }
+              &.active {
+                &:after {
+                  left: 100%;
+                  animation: backLeft .8s;
+                }
+              }
               img{
                 display: block;
 
@@ -341,6 +316,22 @@
                   color: #000000;
                   letter-spacing: 0;
                   line-height: 24px;
+                  @include pos(relative);
+                  &.active {
+                    &:after {
+                      left: 100%;
+                      animation: backLeft 1s;
+                    }
+                  }
+                  &:after {
+                    content: "";
+                    @include pos();
+                    left: 0;
+                    top: 0;
+                    @extend %full;
+                    height: 110%;
+                    background: #fff;
+                  }
                 }
                 p {
                   font-family: Sansation-Regular;
@@ -349,6 +340,22 @@
                   letter-spacing: 0;
                   line-height: 14px;
                   margin-top: 18px;
+                  @include pos(relative);
+                  &.active {
+                    &:after {
+                      left: 100%;
+                      animation: backLeft 1s;
+                    }
+                  }
+                  &:after {
+                    content: "";
+                    @include pos();
+                    left: 0;
+                    top: 0;
+                    @extend %full;
+                    height: 110%;
+                    background: #fff;
+                  }
                 }
               }
             }

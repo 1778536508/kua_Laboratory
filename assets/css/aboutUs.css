@@ -98,11 +98,37 @@
     left: 0; }
   to {
     left: 400px; } }
+/**
+案例 list
+ */
+@keyframes activeTop {
+  from {
+    top: 0; }
+  to {
+    top: -100%; } }
+@keyframes boxLeft {
+  from {
+    left: -210px; }
+  to {
+    left: 46px; } }
+@keyframes txtLeft {
+  from {
+    left: 0; }
+  to {
+    left: 100%; } }
+/*
+K + 孵化器
+ */
+@keyframes backLeft {
+  from {
+    left: 0; }
+  to {
+    left: 100%; } }
 * {
   margin: 0;
   padding: 0; }
 
-html, body, .box {
+html, body, .box, .aboutUs-content-image > div .swiper-wrapper > div .swiper-slide-txt, .aboutUs-content-image > div .swiper-wrapper > div .swiper-slide-txt > div, .aboutUs-content-Culture .aboutUs-content-Culture-box .aboutUs-content-Culture-backimg:after, .aboutUs-content-Culture .aboutUs-content-Culture-box .boutUs-content-Culture-text ul li div:after {
   width: 100%;
   height: 100%; }
 
@@ -325,13 +351,48 @@ html, body, .box {
     .aboutUs-content-image > div .swiper-wrapper {
       transition-timing-function: linear;
       margin: 0 auto; }
-      .aboutUs-content-image > div .swiper-wrapper div {
-        width: 256px;
-        height: 180px;
+      .aboutUs-content-image > div .swiper-wrapper > div {
+        width: 100%;
         overflow: hidden;
-        margin: 0 auto; }
-        .aboutUs-content-image > div .swiper-wrapper div img {
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding: 0 30px;
+        position: relative; }
+        .aboutUs-content-image > div .swiper-wrapper > div img {
+          display: block;
           width: 100%; }
+        .aboutUs-content-image > div .swiper-wrapper > div .swiper-slide-txt {
+          opacity: 0;
+          transition: all .5s;
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+          box-sizing: border-box;
+          padding: 0 30px; }
+          .aboutUs-content-image > div .swiper-wrapper > div .swiper-slide-txt > div {
+            padding: 47px 0 0 48px;
+            background: #F8F8F8;
+            box-sizing: border-box; }
+          .aboutUs-content-image > div .swiper-wrapper > div .swiper-slide-txt h2 {
+            font-family: Sansation-Regular;
+            font-size: 20px;
+            color: #000000;
+            letter-spacing: 0;
+            line-height: 20px; }
+          .aboutUs-content-image > div .swiper-wrapper > div .swiper-slide-txt p {
+            opacity: 0.64;
+            font-family: PingFangSC-Regular;
+            font-size: 12px;
+            color: #000000;
+            letter-spacing: 0;
+            line-height: 12px;
+            margin-top: 53px; }
+        .aboutUs-content-image > div .swiper-wrapper > div:hover .swiper-slide-txt {
+          opacity: 1;
+          transition: all .5s; }
 
 .aboutUs-content-business {
   width: 100%;
@@ -429,15 +490,27 @@ html, body, .box {
     min-width: 1200px;
     position: relative; }
     .aboutUs-content-Culture .aboutUs-content-Culture-box .aboutUs-content-Culture-backimg {
-      width: 100%; }
+      width: 100%;
+      position: relative; }
       .aboutUs-content-Culture .aboutUs-content-Culture-box .aboutUs-content-Culture-backimg img {
         width: 100%;
         min-height: 970px; }
+      .aboutUs-content-Culture .aboutUs-content-Culture-box .aboutUs-content-Culture-backimg:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #fff;
+        z-index: 1; }
+      .aboutUs-content-Culture .aboutUs-content-Culture-box .aboutUs-content-Culture-backimg.active:after {
+        left: 100%;
+        animation: backLeft .8s; }
     .aboutUs-content-Culture .aboutUs-content-Culture-box .boutUs-content-Culture-text {
       width: 100%;
       position: absolute;
       left: 0;
-      top: 0; }
+      top: 0;
+      z-index: 2; }
       .aboutUs-content-Culture .aboutUs-content-Culture-box .boutUs-content-Culture-text h2 {
         font-family: PingFangSC-Medium;
         font-size: 24px;
@@ -470,23 +543,40 @@ html, body, .box {
           box-sizing: border-box;
           padding: 64px 0 0 76px;
           background: #fff;
-          margin-bottom: 100px; }
+          margin-bottom: 100px;
+          overflow: hidden;
+          opacity: 0; }
+          .aboutUs-content-Culture .aboutUs-content-Culture-box .boutUs-content-Culture-text ul li.active {
+            opacity: 1;
+            transition: all .5s; }
           .aboutUs-content-Culture .aboutUs-content-Culture-box .boutUs-content-Culture-text ul li:nth-of-type(odd) {
             margin-right: 100px; }
-          .aboutUs-content-Culture .aboutUs-content-Culture-box .boutUs-content-Culture-text ul li div h3 {
-            font-family: PingFangSC-Medium;
-            font-size: 32px;
-            color: #000000;
-            letter-spacing: 0;
-            line-height: 32px; }
-          .aboutUs-content-Culture .aboutUs-content-Culture-box .boutUs-content-Culture-text ul li div p {
-            opacity: 0.4;
-            font-family: Sansation-Regular;
-            font-size: 22px;
-            color: #000000;
-            letter-spacing: 0;
-            line-height: 22px;
-            margin-top: 48px; }
+          .aboutUs-content-Culture .aboutUs-content-Culture-box .boutUs-content-Culture-text ul li div {
+            position: relative; }
+            .aboutUs-content-Culture .aboutUs-content-Culture-box .boutUs-content-Culture-text ul li div:after {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 0;
+              background: #fff;
+              z-index: 1; }
+            .aboutUs-content-Culture .aboutUs-content-Culture-box .boutUs-content-Culture-text ul li div.active:after {
+              left: 100%;
+              animation: backLeft .8s; }
+            .aboutUs-content-Culture .aboutUs-content-Culture-box .boutUs-content-Culture-text ul li div h3 {
+              font-family: PingFangSC-Medium;
+              font-size: 32px;
+              color: #000000;
+              letter-spacing: 0;
+              line-height: 32px; }
+            .aboutUs-content-Culture .aboutUs-content-Culture-box .boutUs-content-Culture-text ul li div p {
+              opacity: 0.4;
+              font-family: Sansation-Regular;
+              font-size: 22px;
+              color: #000000;
+              letter-spacing: 0;
+              line-height: 22px;
+              margin-top: 48px; }
       .aboutUs-content-Culture .aboutUs-content-Culture-box .boutUs-content-Culture-text .boutUs-content-Culture-loding {
         width: 100%;
         text-align: center; }

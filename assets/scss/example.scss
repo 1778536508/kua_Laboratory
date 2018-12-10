@@ -218,6 +218,23 @@
               padding-left: 86px;
               @include pos(relative);
               margin-bottom: 86px;
+              overflow: hidden;
+              &:after {
+                content: "";
+                @include pos();
+                left: 0;
+                top: 0;
+                @extend %full;
+                background: #f8f8f8;
+              }
+
+              &.active {
+                &:after {
+                  top: -100%;
+                  animation: activeTop .8s;
+                }
+
+              }
               img {
                 display: block;
                 width: 100%;
@@ -230,8 +247,13 @@
                 @include pos();
                 top: 50%;
                 margin-top: -65px;
-                left: 46px;
+                left: -210px;
                 z-index: 1;
+                overflow: hidden;
+                &.active {
+                  left: 46px;
+                  animation: boxLeft .8s;
+                }
                 h3 {
                   font-family: PingFangSC-Regular;
                   font-size: 20px;
@@ -240,6 +262,22 @@
                   line-height: 20px;
                   text-align: center;
                   margin-top: 38px;
+                  @include pos(relative);
+                  &:after {
+                    content: "";
+                    @include pos();
+                    left: 0;
+                    top: 0;
+                    @extend %full;
+                    background: #fff;
+                    z-index: 1;
+                  }
+                  &.active {
+                    &:after {
+                      left: 100%;
+                      animation: txtLeft .8s;
+                    }
+                  }
                 }
                 p{
                   font-family: PingFangSC-Regular;
@@ -249,6 +287,22 @@
                   line-height: 14px;
                   text-align: center;
                   margin-top: 20px;
+                  @include pos(relative);
+                  &:after {
+                    content: "";
+                    @include pos();
+                    left: 0;
+                    top: 0;
+                    @extend %full;
+                    background: #fff;
+                    z-index: 1;
+                  }
+                  &.active {
+                    &:after {
+                      left: 100%;
+                      animation: txtLeft .8s;
+                    }
+                  }
                 }
               }
             }

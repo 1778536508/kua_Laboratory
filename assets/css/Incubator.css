@@ -98,11 +98,37 @@
     left: 0; }
   to {
     left: 400px; } }
+/**
+案例 list
+ */
+@keyframes activeTop {
+  from {
+    top: 0; }
+  to {
+    top: -100%; } }
+@keyframes boxLeft {
+  from {
+    left: -210px; }
+  to {
+    left: 46px; } }
+@keyframes txtLeft {
+  from {
+    left: 0; }
+  to {
+    left: 100%; } }
+/*
+K + 孵化器
+ */
+@keyframes backLeft {
+  from {
+    left: 0; }
+  to {
+    left: 100%; } }
 * {
   margin: 0;
   padding: 0; }
 
-html, body, .box, .Incubator-content .Incubator-content-list ul, .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul li .Incubator-nov-img-img {
+html, body, .box, .Incubator-content .Incubator-content-list ul, .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul li .Incubator-nov-img-img, .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul li .Incubator-nov-img-img:after, .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul li .Incubator-nov-img-title .Incubator-nov-img-text h2:after, .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul li .Incubator-nov-img-title .Incubator-nov-img-text p:after {
   width: 100%;
   height: 100%; }
 
@@ -391,7 +417,17 @@ html, body, .box {
               .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul li:nth-of-type(even) .Incubator-nov-img-title {
                 padding-right: 96px; }
             .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul li .Incubator-nov-img-img {
-              overflow: hidden; }
+              overflow: hidden;
+              position: relative; }
+              .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul li .Incubator-nov-img-img:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                background: #fff; }
+              .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul li .Incubator-nov-img-img.active:after {
+                left: 100%;
+                animation: backLeft .8s; }
               .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul li .Incubator-nov-img-img img {
                 display: block;
                 width: 100%; }
@@ -416,14 +452,36 @@ html, body, .box {
                   font-size: 24px;
                   color: #000000;
                   letter-spacing: 0;
-                  line-height: 24px; }
+                  line-height: 24px;
+                  position: relative; }
+                  .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul li .Incubator-nov-img-title .Incubator-nov-img-text h2.active:after {
+                    left: 100%;
+                    animation: backLeft 1s; }
+                  .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul li .Incubator-nov-img-title .Incubator-nov-img-text h2:after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 110%;
+                    background: #fff; }
                 .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul li .Incubator-nov-img-title .Incubator-nov-img-text p {
                   font-family: Sansation-Regular;
                   font-size: 14px;
                   color: #000000;
                   letter-spacing: 0;
                   line-height: 14px;
-                  margin-top: 18px; }
+                  margin-top: 18px;
+                  position: relative; }
+                  .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul li .Incubator-nov-img-title .Incubator-nov-img-text p.active:after {
+                    left: 100%;
+                    animation: backLeft 1s; }
+                  .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul li .Incubator-nov-img-title .Incubator-nov-img-text p:after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 110%;
+                    background: #fff; }
           .Incubator-content .Incubator-nov .Incubator-nov-content .Incubator-nov-img ul:nth-of-type(even) li:nth-of-type(odd) {
             width: 60%;
             padding-right: 72px; }

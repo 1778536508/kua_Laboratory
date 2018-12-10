@@ -98,6 +98,32 @@
     left: 0; }
   to {
     left: 400px; } }
+/**
+案例 list
+ */
+@keyframes activeTop {
+  from {
+    top: 0; }
+  to {
+    top: -100%; } }
+@keyframes boxLeft {
+  from {
+    left: -210px; }
+  to {
+    left: 46px; } }
+@keyframes txtLeft {
+  from {
+    left: 0; }
+  to {
+    left: 100%; } }
+/*
+K + 孵化器
+ */
+@keyframes backLeft {
+  from {
+    left: 0; }
+  to {
+    left: 100%; } }
 * {
   margin: 0;
   padding: 0; }
