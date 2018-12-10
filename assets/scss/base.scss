@@ -84,8 +84,8 @@
 }
 
 @keyframes mywidth {
-  from {width: 0;}
-  to {width: 800px;}
+  from { transform:rotateX(90deg);padding-top: 84px;}
+  to {transform:rotateX(0deg);padding-top: 0;}
 }
 
 @keyframes myantion {

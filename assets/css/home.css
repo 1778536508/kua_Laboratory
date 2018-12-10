@@ -44,9 +44,11 @@
     right: 200px; } }
 @keyframes mywidth {
   from {
-    width: 0; }
+    transform: rotateX(90deg);
+    padding-top: 84px; }
   to {
-    width: 800px; } }
+    transform: rotateX(0deg);
+    padding-top: 0; } }
 @keyframes myantion {
   0% {
     width: 0;
@@ -234,14 +236,24 @@ html, body, .box {
         width: 800px;
         overflow: hidden;
         box-sizing: border-box;
-        height: 168px;
+        height: 184px;
         color: #fff;
         font-family: Sansation-Regular;
         font-size: 60px;
         color: #fff;
         letter-spacing: 0;
-        position: relative;
-        animation: mywidth 1s; }
+        position: relative; }
+        .home-content .home-banner-box .home-banner .home-view .home-title span {
+          display: inline-block;
+          transform: rotateX(180deg);
+          height: 84px;
+          box-sizing: border-box;
+          padding-top: 84px;
+          overflow: hidden; }
+          .home-content .home-banner-box .home-banner .home-view .home-title span.active {
+            transform: rotateX(0deg);
+            padding-top: 0;
+            animation: mywidth .8s; }
         .home-content .home-banner-box .home-banner .home-view .home-title:after {
           content: '';
           width: 800px;
@@ -249,8 +261,7 @@ html, body, .box {
           background: #000;
           position: absolute;
           left: 800px;
-          top: 0;
-          animation: myantion 1.2s; }
+          top: 0; }
       .home-content .home-banner-box .home-banner .home-view .home-text {
         margin-top: 74px;
         width: 400px;

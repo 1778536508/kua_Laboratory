@@ -44,9 +44,11 @@
     right: 200px; } }
 @keyframes mywidth {
   from {
-    width: 0; }
+    transform: rotateX(90deg);
+    padding-top: 84px; }
   to {
-    width: 800px; } }
+    transform: rotateX(0deg);
+    padding-top: 0; } }
 @keyframes myantion {
   0% {
     width: 0;

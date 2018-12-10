@@ -55,14 +55,29 @@
           width: 800px;
           overflow: hidden;
           box-sizing: border-box;
-          height: 168px;
+          height: 184px;
           color: #fff;
           font-family: Sansation-Regular;
           font-size: 60px;
           color: #fff;
           letter-spacing: 0;
           @include pos(relative);
-          animation: mywidth 1s;
+          //animation: mywidth 5s;
+          //transform:rotateX(90deg);
+          //-webkit-transform:rotateX(120deg);
+          span{
+            display: inline-block;
+            transform:rotateX(180deg);
+            height: 84px;
+            box-sizing: border-box;
+            padding-top: 84px;
+            overflow: hidden;
+            &.active {
+              transform:rotateX(0deg);
+              padding-top: 0;
+              animation: mywidth .8s;
+            }
+          }
           &:after {
             content: '';
             width: 800px;
@@ -71,7 +86,7 @@
             @include pos();
             left: 800px;
             top: 0;
-            animation: myantion 1.2s;
+            //animation: myantion 1.2s;
           }
         }
         .home-text {

@@ -31,7 +31,15 @@
                 <div class="home-banner-box">
                     <div class="home-banner">
                         <div class="home-view">
-                            <div class="home-title">Here comes K² Star Sluate to game-changers</div>
+                            <div class="home-title" id="home-title">
+                                <span>Here</span>
+                                <span>comes</span>
+                                <span>K²</span>
+                                <span>Star</span>
+                                <span>Sluate</span>
+                                <span>to</span>
+                                <span>game-changers</span>
+                            </div>
                             <div class="home-text"></div>
                         </div>
                         <a href="javascript:;" class="home-right">了解我们 <i></i></a>
@@ -209,5 +217,24 @@
 <script>
     $(document).ready(function () {
         $('#header-title-pics > li:nth-of-type(1)').addClass('active');
+        $('#home-title span:nth-of-type(1)').addClass('active');
+        setTimeout(function () {
+            $('#home-title span:nth-of-type(2)').addClass('active');
+        },300)
+        setTimeout(function () {
+            $('#home-title span:nth-of-type(3)').addClass('active');
+        },400)
+        setTimeout(function () {
+            $('#home-title span:nth-of-type(4)').addClass('active');
+        },500)
+        setTimeout(function () {
+            $('#home-title span:nth-of-type(5)').addClass('active');
+        },600)
+        setTimeout(function () {
+            $('#home-title span:nth-of-type(6)').addClass('active');
+        },700)
+        setTimeout(function () {
+            $('#home-title span:nth-of-type(7)').addClass('active');
+        },800)
     })
 </script>
