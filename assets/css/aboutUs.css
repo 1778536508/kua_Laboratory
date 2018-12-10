@@ -113,7 +113,8 @@ html {
 html, body, .box {
   margin: 0 auto;
   min-width: 1200px;
-  position: relative; }
+  position: relative;
+  margin: 0 auto; }
 
 .formmode-content-title {
   max-width: 1400px;
@@ -245,7 +246,8 @@ html, body, .box {
         box-sizing: border-box; }
         .formmode-content-banner .swiper-container .swiper-wrapper .swiper-slide .swiper-slide-box {
           width: 100%;
-          position: relative; }
+          position: relative;
+          transition: all .5s; }
           .formmode-content-banner .swiper-container .swiper-wrapper .swiper-slide .swiper-slide-box:after {
             content: "";
             position: absolute;

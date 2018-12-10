@@ -99,6 +99,7 @@
         .swiper-slide-box {
           width: 100%;
           @include pos(relative);
+          transition: all .5s;
           &:after {
             content: "";
             @include pos();

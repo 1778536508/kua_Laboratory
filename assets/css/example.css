@@ -113,7 +113,8 @@ html {
 html, body, .box {
   margin: 0 auto;
   min-width: 1200px;
-  position: relative; }
+  position: relative;
+  margin: 0 auto; }
 
 .formmode-content-title {
   max-width: 1400px;
@@ -169,8 +170,8 @@ html, body, .box {
     content: ''; }
 
 .example-content {
+  overflow: hidden;
   width: 100%;
-  padding: 0 0 174px 0;
   box-sizing: border-box; }
   .example-content .example-title {
     max-width: 1440px;

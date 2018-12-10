@@ -113,7 +113,8 @@ html {
 html, body, .box {
   margin: 0 auto;
   min-width: 1200px;
-  position: relative; }
+  position: relative;
+  margin: 0 auto; }
 
 .formmode-content-title {
   max-width: 1400px;
@@ -169,6 +170,7 @@ html, body, .box {
     content: ''; }
 
 .Incubator-content {
+  overflow: hidden;
   width: 100%;
   min-width: 1200px;
   margin: 0 auto; }

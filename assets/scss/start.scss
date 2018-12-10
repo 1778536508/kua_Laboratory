@@ -29,11 +29,16 @@ html,body,.box{
 }
 .start-title {
   @include pos();
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 400px;
+  height: 450px;
   transform: translateX(234px);
   animation: myfirst 5s;
   .k2-star {
     box-sizing: border-box;
-    margin-top: 181px;
+    //margin-top: 181px;
     //width: 245px;
     height: 89px;
     color: #fff;
