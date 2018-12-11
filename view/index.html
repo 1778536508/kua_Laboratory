@@ -5,6 +5,7 @@
     <title>启动页</title>
     <link rel="stylesheet" href="../assets/css/default.css">
     <link rel="stylesheet" href="../assets/css/start.css">
+    <script src="../assets/js/jquery.min.js"></script>
 </head>
 <body>
 <div class="box">
@@ -12,10 +13,63 @@
     <div class="start-background"></div>
     <!--文字-->
     <div class="start-title">
-        <div class="k2-star">k2 star</div>
-        <div class="star-text"></div>
-        <div class="start-btn"><a href="./home/home.html">开始探索</a></div>
+        <div class="k2-star" id="k2-star">
+            <span>k2</span>
+            <span> star</span>
+        </div>
+        <!--<div class="star-text"></div>-->
+        <div class="star-text" id="star-text">
+            <span>聚</span>
+            <span>焦</span>
+            <span>宏</span>
+            <span>观</span>
+            <span>世</span>
+            <span>界</span>
+            <span>的</span>
+            <span>围</span>
+            <span>观</span>
+            <span>研</span>
+            <span>究</span>
+            <span>以</span>
+            <span>微</span>
+            <span>观</span>
+            <span>,</span>
+            <span>秦</span>
+            <span>顶</span>
+            <span>尖</span>
+            <span>.</span>
+        </div>
+        <div class="start-btn" id="start-btn"><a href="./home/home.html">开始探索</a></div>
     </div>
 </div>
 </body>
 </html>
+<script>
+    $(document).ready(function () {
+        //文字添加Class
+        function textAnsion(dom1, dom2, mo1, mo2, ) {
+            var txt1 = dom1;
+            var txt2 = dom2;
+            var s1 = mo1;
+            var s2 = mo2
+            for(let i = 1; i <= txt1.length; i++) {
+                setTimeout(function () {
+                    $(txt1).eq(i - 1).addClass('active');
+                }, (s1 + (i * 200)))
+            }
+            for(let i = 1; i <= txt2.length; i++) {
+                setTimeout(function () {
+                    $(txt2).eq(i - 1).addClass('active');
+                }, (s2 + (i * 100)))
+            }
+            setTimeout(function () {
+                $("#start-btn").addClass('active');
+            },1000)
+        }
+        textAnsion($("#k2-star span"), $("#star-text span"), 0, 500)
+
+    })
+
+
+
+</script>

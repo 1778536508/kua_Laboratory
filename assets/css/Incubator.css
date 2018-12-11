@@ -44,11 +44,13 @@
     right: 200px; } }
 @keyframes mywidth {
   from {
-    transform: rotateX(90deg);
-    padding-top: 84px; }
+    padding-top: 84px;
+    opacity: 0;
+    transform: matrix(0, 0, 0, 0, 0, 0); }
   to {
-    transform: rotateX(0deg);
-    padding-top: 0; } }
+    padding-top: 0;
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 0, 0); } }
 @keyframes myantion {
   0% {
     width: 0;
@@ -219,7 +221,8 @@ html, body, .box {
     bottom: 0;
     top: 100px;
     margin: auto;
-    animation: myleft 2s; }
+    animation: myleft 2s;
+    transform: skew(-10deg, 0); }
   .Incubator-content .Incubator-content-list {
     width: 100%;
     height: 400px;

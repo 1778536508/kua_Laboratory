@@ -44,11 +44,13 @@
     right: 200px; } }
 @keyframes mywidth {
   from {
-    transform: rotateX(90deg);
-    padding-top: 84px; }
+    padding-top: 84px;
+    opacity: 0;
+    transform: matrix(0, 0, 0, 0, 0, 0); }
   to {
-    transform: rotateX(0deg);
-    padding-top: 0; } }
+    padding-top: 0;
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 0, 0); } }
 @keyframes myantion {
   0% {
     width: 0;
@@ -245,42 +247,44 @@ html, body, .box {
         position: relative; }
         .home-content .home-banner-box .home-banner .home-view .home-title span {
           display: inline-block;
-          transform: rotateX(180deg);
+          transform: skew(-30deg, 0);
+          opacity: 0;
           height: 84px;
           box-sizing: border-box;
           padding-top: 84px;
-          overflow: hidden; }
+          padding-left: 20px;
+          overflow: hidden;
+          transform-style: preserve-3d; }
           .home-content .home-banner-box .home-banner .home-view .home-title span.active {
-            transform: rotateX(0deg);
+            padding-left: 0px;
+            opacity: 1;
+            transform: skew(0, 0);
             padding-top: 0;
-            animation: mywidth .8s; }
-        .home-content .home-banner-box .home-banner .home-view .home-title:after {
-          content: '';
-          width: 800px;
-          height: 100%;
-          background: #000;
-          position: absolute;
-          left: 800px;
-          top: 0; }
+            transition: all 1s; }
       .home-content .home-banner-box .home-banner .home-view .home-text {
         margin-top: 74px;
-        width: 400px;
+        width: 430px;
         height: 100px;
-        background: url("../images/img_homeheader_title.png");
-        background-repeat: no-repeat;
-        background-size: 100% auto;
-        overflow: hidden;
-        animation: mywidth1 1s;
-        position: relative; }
-        .home-content .home-banner-box .home-banner .home-view .home-text:after {
-          content: '';
-          width: 400px;
-          height: 100%;
-          background: #000;
-          position: absolute;
-          left: 500px;
-          top: 0;
-          animation: myantion1 1.2s; }
+        overflow: hidden; }
+        .home-content .home-banner-box .home-banner .home-view .home-text span {
+          display: inline-block;
+          height: 40px;
+          color: #fff;
+          font-size: 28px;
+          transform: skew(-10deg, 0);
+          overflow: hidden;
+          box-sizing: border-box;
+          padding-top: 50px;
+          opacity: 0; }
+          .home-content .home-banner-box .home-banner .home-view .home-text span:nth-of-type(2) {
+            margin-left: 20px; }
+          .home-content .home-banner-box .home-banner .home-view .home-text span:nth-of-type(14) {
+            margin-left: 40px; }
+          .home-content .home-banner-box .home-banner .home-view .home-text span.active {
+            opacity: 1;
+            padding-top: 0px;
+            transform: skew(0, 0);
+            transition: all .8s; }
       .home-content .home-banner-box .home-banner .home-right {
         position: absolute;
         right: 200px;
@@ -373,6 +377,17 @@ html, body, .box {
                   font-size: 14px;
                   color: #000000;
                   line-height: 32px; }
+                  .home-list .home-list-pase > li .home-list-img .home-list-txt ul li:nth-of-type(2) p span {
+                    display: inline-block;
+                    height: 23px;
+                    margin-left: -5px;
+                    overflow: hidden;
+                    opacity: 0;
+                    transform: skew(-30deg, 0); }
+                    .home-list .home-list-pase > li .home-list-img .home-list-txt ul li:nth-of-type(2) p span.active {
+                      opacity: 1;
+                      transform: skew(0, 0);
+                      transition: all .8s; }
 
 .home-type {
   width: 100%; }
@@ -431,14 +446,30 @@ html, body, .box {
           margin-top: 36px; }
         .home-type ul li .home-type-txt p {
           opacity: 0.56;
-          font-size: 22px;
-          color: #000000;
-          letter-spacing: 0;
-          line-height: 34px;
-          white-space: nowrap;
           overflow: hidden;
-          position: relative; }
+          word-break: break-word; }
+          .home-type ul li .home-type-txt p span {
+            display: inline-block;
+            line-height: 34px;
+            font-size: 32px;
+            margin-left: -8px;
+            color: #000000;
+            letter-spacing: 0;
+            height: 34px;
+            box-sizing: border-box;
+            overflow: hidden;
+            padding-top: 34px;
+            opacity: 0;
+            transform: skew(-30deg, 0); }
+            .home-type ul li .home-type-txt p span:first-child {
+              margin-left: 0; }
+            .home-type ul li .home-type-txt p span.active {
+              padding-top: 0;
+              opacity: 1;
+              transform: skew(0, 0);
+              transition: all 1s; }
           .home-type ul li .home-type-txt p:nth-of-type(1) {
+            width: 380px;
             opacity: 1;
             font-size: 32px;
             color: #000000;
@@ -446,48 +477,16 @@ html, body, .box {
             line-height: 32px;
             margin-top: 53px;
             margin-bottom: 32px;
-            position: relative;
-            width: 0; }
-            .home-type ul li .home-type-txt p:nth-of-type(1).active {
-              width: 360px;
-              animation: mywidth2 1s; }
-              .home-type ul li .home-type-txt p:nth-of-type(1).active:after {
-                content: '';
-                width: 100%;
-                height: 100%;
-                background: #fff;
-                position: absolute;
-                left: 400px;
-                top: 0;
-                animation: myantion 1s; }
+            position: relative; }
           .home-type ul li .home-type-txt p:nth-of-type(2) {
-            width: 0px; }
-            .home-type ul li .home-type-txt p:nth-of-type(2).active {
-              width: 320px;
-              animation: mywidth2 1s; }
-              .home-type ul li .home-type-txt p:nth-of-type(2).active:after {
-                content: '';
-                width: 100%;
-                height: 100%;
-                background: #fff;
-                position: absolute;
-                left: 300px;
-                top: 0;
-                animation: myantion 1s; }
-          .home-type ul li .home-type-txt p:nth-of-type(3) {
-            width: 0px; }
-            .home-type ul li .home-type-txt p:nth-of-type(3).active {
-              width: 300px;
-              animation: mywidth2 1s; }
-              .home-type ul li .home-type-txt p:nth-of-type(3).active:after {
-                content: '';
-                width: 100%;
-                height: 100%;
-                background: #fff;
-                position: absolute;
-                left: 300px;
-                top: 0;
-                animation: myantion 1s; }
+            width: 260px; }
+            .home-type ul li .home-type-txt p:nth-of-type(2) span {
+              font-size: 22px;
+              margin-left: 5px; }
+              .home-type ul li .home-type-txt p:nth-of-type(2) span:first-child {
+                margin-left: 0; }
+              .home-type ul li .home-type-txt p:nth-of-type(2) span:nth-of-type(4) {
+                margin-left: 0; }
 
 .home-cooperation {
   width: 100%;
@@ -525,7 +524,8 @@ html, body, .box {
           line-height: 20px;
           margin-top: 48px;
           text-align: center;
-          line-height: 48px; }
+          line-height: 48px;
+          transform: skew(-5deg, 0); }
       .home-cooperation > div ul .home-cooperation-name {
         position: absolute;
         left: -320px; }
