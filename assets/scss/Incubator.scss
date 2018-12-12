@@ -254,6 +254,7 @@
         width: 100%;
         ul {
           width: 100%;
+          @include clearfix;
           li {
             margin-bottom: 158px;
             height: 310px;

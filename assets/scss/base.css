@@ -189,4 +189,14 @@ html, body, .box {
       z-index: 1;
       animation: antionLeft 1s ease-in-out; }
 
+.nodata {
+  width: 100%;
+  height: 500px;
+  text-align: center;
+  line-height: 500px; }
+  .nodata a {
+    font-size: 40px;
+    font-weight: bold;
+    color: #e4e5e6; }
+
 /*# sourceMappingURL=base.css.map */

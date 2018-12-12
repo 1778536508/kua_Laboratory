@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="../../assets/css/header.css">
     <link rel="stylesheet" href="../../assets/css/footer.css">
     <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../config/api.js"></script>
     <script src="../../components/header.js"></script>
     <script src="../../components/footer.js"></script>
     <link rel="stylesheet" href="../../assets/css/swiper.min.css">
     <script src="../../assets/js/swiper.min.js"></script>
+    <script src="../../components/Incubator/Incubator.js"></script>
 </head>
 <body>
     <div class="Incubator-box">
@@ -24,18 +26,6 @@
                 <p>创新技术+资源平台+资金平台，打造商业新英雄</p>
                 <a href="javascript:;" class="formmode-content-title-submit">提交BP</a>
             </div>
-            <!--<div class="Incubator-content-title">-->
-                <!--<h2>K Plus</h2>-->
-                <!--<ul>-->
-                    <!--<li>-->
-                      <!--<p>夸克星实验室参与共建 “科技部中技所数字科技创新研究院”</p>-->
-                      <!--<p>创新技术+资源平台+资金平台，打造商业新英雄</p>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<a href="javascript:;">提交BP</a>-->
-                    <!--</li>-->
-                <!--</ul>-->
-            <!--</div>-->
             <div class="Incubator-content-list" id="Incubator-content-list">
                 <ul>
                     <li class="active">
@@ -132,65 +122,64 @@
             <div class="Incubator-nov">
                 <div class="Incubator-nov-content">
                     <div class="Incubator-nov-list">
-                        <ul>
-                            <li class="active"><a href="javascript:;">全部</a></li>
-                            <li><a href="javascript:;">创投路演</a></li>
-                            <li><a href="javascript:;">专业分享</a></li>
-                            <li><a href="javascript:;">非遗设计大赛</a></li>
-                            <li><a href="javascript:;">内部团建</a></li>
+                        <ul id="Incubator-nov-list-pics">
+                           <!--分类-->
                         </ul>
                     </div>
                     <div class="Incubator-nov-img" id="Incubator-nov-img">
-                        <ul>
-                          <li>
-                              <div class="Incubator-nov-img-img">
-                                  <img src="../../assets/images/img_contact_backgroundimg.png" alt="">
-                              </div>
-                              <div class="Incubator-nov-img-title">
-                                  <div class="Incubator-nov-img-text">
-                                      <h2>Nov.04</h2>
-                                      <p>Painting with Code Introducing our new open</p>
-                                  </div>
-                              </div>
-                          </li>
-                            <li>
-                                <div class="Incubator-nov-img-img">
-                                    <img src="../../assets/images/img_contact_backgroundimg.png" alt="">
-                                </div>
-                                <div class="Incubator-nov-img-title">
-                                    <div class="Incubator-nov-img-text">
-                                        <h2>Nov.03</h2>
-                                        <p>Painting with Code Introducing our new open</p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <div class="Incubator-nov-img-img">
-                                    <img src="../../assets/images/img_contact_backgroundimg.png" alt="">
-                                </div>
-                                <div class="Incubator-nov-img-title">
-                                    <div class="Incubator-nov-img-text">
-                                        <h2>Nov.02</h2>
-                                        <p>Painting with Code Introducing our new open</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="Incubator-nov-img-img">
-                                    <img src="../../assets/images/img_contact_backgroundimg.png" alt="">
-                                </div>
-                                <div class="Incubator-nov-img-title">
-                                    <div class="Incubator-nov-img-text">
-                                        <h2>Nov.01</h2>
-                                        <p>Painting with Code Introducing our new open</p>
-                                    </div>
-                                </div>
+                        <div id="Incubator-nov-img-box">
+                            <!--<ul>-->
+                                <!--<li>-->
+                                    <!--<div class="Incubator-nov-img-img">-->
+                                        <!--<img src="../../assets/images/img_contact_backgroundimg.png" alt="">-->
+                                    <!--</div>-->
+                                    <!--<div class="Incubator-nov-img-title">-->
+                                        <!--<div class="Incubator-nov-img-text">-->
+                                            <!--<h2>Nov.04</h2>-->
+                                            <!--<p>Painting with Code Introducing our new open</p>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                    <!--<div class="Incubator-nov-img-img">-->
+                                        <!--<img src="../../assets/images/img_contact_backgroundimg.png" alt="">-->
+                                    <!--</div>-->
+                                    <!--<div class="Incubator-nov-img-title">-->
+                                        <!--<div class="Incubator-nov-img-text">-->
+                                            <!--<h2>Nov.03</h2>-->
+                                            <!--<p>Painting with Code Introducing our new open</p>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+                            <!--<ul>-->
+                                <!--<li>-->
+                                    <!--<div class="Incubator-nov-img-img">-->
+                                        <!--<img src="../../assets/images/img_contact_backgroundimg.png" alt="">-->
+                                    <!--</div>-->
+                                    <!--<div class="Incubator-nov-img-title">-->
+                                        <!--<div class="Incubator-nov-img-text">-->
+                                            <!--<h2>Nov.02</h2>-->
+                                            <!--<p>Painting with Code Introducing our new open</p>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                    <!--<div class="Incubator-nov-img-img">-->
+                                        <!--<img src="../../assets/images/img_contact_backgroundimg.png" alt="">-->
+                                    <!--</div>-->
+                                    <!--<div class="Incubator-nov-img-title">-->
+                                        <!--<div class="Incubator-nov-img-text">-->
+                                            <!--<h2>Nov.01</h2>-->
+                                            <!--<p>Painting with Code Introducing our new open</p>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
 
-                            </li>
-                        </ul>
-                        <p class="Incubator-nov-img-buttom"><a href="javascript:;">查看更多</a></p>
+                                <!--</li>-->
+                            <!--</ul>-->
+                        </div>
+
+                        <p class="Incubator-nov-img-buttom"><a href="javascript:;" id="Incubator-nov-img-buttom">查看更多</a></p>
                     </div>
                 </div>
             </div>
@@ -208,14 +197,7 @@
         $('#Incubator-content-list > ul > li').click(function () {
             $(this).addClass('active').siblings().removeClass('active');
         })
-        $('.Incubator-nov-list > ul > li').click(function () {
-            $(this).addClass('active').siblings().removeClass('active');
-            //切换选项触发动画
-            removeMation();
-            setTimeout(function () {
-                createMation();
-            },100)
-        })
+
         var mySwiper = new Swiper('.swiper-container', {
             slidesPerView : 5,
             spaceBetween : 92,
@@ -226,34 +208,6 @@
             freeMode : true,
             keyboardControl : true,         // 键盘操作
         })
-
-
-        // 添加动画
-        function createMation(callback) {
-            $("#Incubator-nov-img .Incubator-nov-img-img").addClass('active');
-            $("#Incubator-nov-img h2").addClass('active');
-            $("#Incubator-nov-img p").addClass('active');
-            return typeof callback == 'function' && callback();
-        };
-        //解除动画
-        function removeMation(callback) {
-            $("#Incubator-nov-img .Incubator-nov-img-img").removeClass('active');
-            $("#Incubator-nov-img h2").removeClass('active');
-            $("#Incubator-nov-img p").removeClass('active');
-            return typeof callback == 'function' && callback();
-        }
-        //刷新页面显示
-        if ($(window).scrollTop() > 1400) {
-            createMation();
-        }
-        //滚动显示动画
-        $(window).scroll(function () {
-            console.log($(window).scrollTop())
-            if ($(window).scrollTop() > 1400) {
-                createMation();
-            }
-        });
-
 
 
     })

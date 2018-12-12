@@ -256,6 +256,18 @@ html,body,.box{
     }
   }
 }
+.nodata {
+  width: 100%;
+  height: 500px;
+  text-align: center;
+  line-height: 500px;
+
+  a {
+    font-size: 40px;
+    font-weight: bold;
+    color: #e4e5e6;
+  }
+}
 
 
 //回到顶部

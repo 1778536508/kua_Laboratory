@@ -3,11 +3,11 @@ $(document).ready(function () {
                 <div class="header-logo"></div>
                 <div class="header-title">
                     <ul id="header-title-pics">
-                        <li><a href="/view/home/home.html">首页</a></li>
-                        <li><a href="/view/example/example.html">案例</a></li>
-                        <li><a href="/view/Incubator/Incubator.html">K + 孵化器</a></li>
-                        <li><a href="/view/formmode/formmode.html">合作方式</a></li>
-                        <li><a href="/view/aboutUs/aboutUs.html">我们</a></li>
+                        <li><a href="`+config.header[0].value+`">`+config.header[0].text+`</a></li>
+                        <li><a href="`+config.header[1].value+`">`+config.header[1].text+`</a></li>
+                        <li><a href="`+config.header[2].value+`">`+config.header[2].text+`</a></li>
+                        <li><a href="`+config.header[3].value+`">`+config.header[3].text+`</a></li>
+                        <li><a href="`+config.header[4].value+`">`+config.header[4].text+`</a></li>
                     </ul>
                 </div>
             </div>`

@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <title>案例</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
-
     <link rel="stylesheet" href="../../assets/css/default.css">
     <link rel="stylesheet" href="../../assets/css/example.css">
     <link rel="stylesheet" href="../../assets/css/header.css">
     <link rel="stylesheet" href="../../assets/css/footer.css">
     <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../config/api.js"></script>
     <script src="../../components/header.js"></script>
     <script src="../../components/footer.js"></script>
     <link rel="stylesheet" href="../../assets/css/swiper.min.css">
     <script src="../../assets/js/swiper.min.js"></script>
+    <script src="../../components/example/example.js"></script>
 </head>
 <body>
 <div class="example-box">
@@ -65,77 +66,23 @@
                 <div class="example-list-type-box-childer">
                     <div class="example-list-type-text" id="example-list-type-text">
                         <ul class="example-list-type-text-master">
-                            <li class="active"><a href="javscript:;">全部</a></li>
+                            <li class="active"><a href="javscript:;" data_id="">全部</a></li>
                         </ul>
-                        <ul class="example-list-type-text-pics">
-                            <li><a href="javascript:;">自营孵化</a></li>
-                            <li><a href="javascript:;">服务支持</a></li>
-                            <li><a href="javascript:;">创新投资</a></li>
+                        <ul class="example-list-type-text-pics" id="example-list-type-text-pics-service">
+                           <!--服务分类-->
                         </ul>
-                        <ul class="example-list-type-text-pics">
-                            <li><a href="javascript:;">新零售</a></li>
-                            <li><a href="javascript:;">区块链</a></li>
-                            <li><a href="javascript:;">AI智能</a></li>
-                            <li><a href="javascript:;">交通/出行</a></li>
-                            <li><a href="javascript:;">新媒体</a></li>
-                            <li><a href="javascript:;">文化</a></li>
-                            <li><a href="javascript:;">实体经济</a></li>
-                            <li><a href="javascript:;">娱乐</a></li>
-                            <li><a href="javascript:;">其它</a></li>
+                        <ul class="example-list-type-text-pics" id="example-list-type-text-pics-industry">
+                            <!--行业分类-->
                         </ul>
-                        <ul class="example-list-type-text-pics">
-                            <li><a href="javascript:;">数字化转型</a></li>
-                            <li><a href="javascript:;">产品设计</a></li>
-                            <li><a href="javascript:;">运营战略</a></li>
-                            <li><a href="javascript:;">体验提升</a></li>
+                        <ul class="example-list-type-text-pics" id="example-list-type-text-pics-support">
+                           <!--支持分类-->
                         </ul>
                     </div>
                     <div class="example-list-type-iamges" id="example-list-type-iamges">
-                        <ul class="example-list-type-pics">
-                            <li>
-                                <img src="../../assets/images/img_contact_backgroundimg.png" alt="">
-                                <div class="example-list-type-iamges-text">
-                                    <h3>案例名称</h3>
-                                    <p>产品介绍</p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="../../assets/images/img_contact_backgroundimg.png" alt="">
-                                <div class="example-list-type-iamges-text">
-                                    <h3>案例名称</h3>
-                                    <p>产品介绍</p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="../../assets/images/img_contact_backgroundimg.png" alt="">
-                                <div class="example-list-type-iamges-text">
-                                    <h3>案例名称</h3>
-                                    <p>产品介绍</p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="../../assets/images/img_contact_backgroundimg.png" alt="">
-                                <div class="example-list-type-iamges-text">
-                                    <h3>案例名称</h3>
-                                    <p>产品介绍</p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="../../assets/images/img_contact_backgroundimg.png" alt="">
-                                <div class="example-list-type-iamges-text">
-                                    <h3>案例名称</h3>
-                                    <p>产品介绍</p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="../../assets/images/img_contact_backgroundimg.png" alt="">
-                                <div class="example-list-type-iamges-text">
-                                    <h3>案例名称</h3>
-                                    <p>产品介绍</p>
-                                </div>
-                            </li>
+                        <ul class="example-list-type-pics" id="example-list-type-pics">
+
                         </ul>
-                        <p class="example-list-type-buttn"><a href="javascript:;">查看更多</a></p>
+                        <p class="example-list-type-buttn" id="example-list-type-buttn"><a href="javascript:;">查看更多</a></p>
                     </div>
                 </div>
             </div>
@@ -165,67 +112,16 @@
                 return current + ' / ' + total;
             },
             onInit: function(swiper1) {    // 初始化回调
-                console.log('swiper1',swiper1.activeIndex)
+                // console.log('swiper1',swiper1.activeIndex)
                 $(".swiper-container .swiper-slide").eq(swiper1.activeIndex).addClass('active').siblings().removeClass('active');
             },
             onSlideChangeStart:function (swiper) {      // 每次切换回调
-                console.log('swiper',swiper.activeIndex)
+                // console.log('swiper',swiper.activeIndex)
                 $(".swiper-container .swiper-slide").eq(swiper.activeIndex).addClass('active').siblings().removeClass('active');
             },
         })
 
 
-
-
-
-
-
-
-        
-        // 添加动画
-        function createMation(callback) {
-            $("#example-list-type-iamges li").addClass('active');
-            setTimeout(function () {
-                $("#example-list-type-iamges .example-list-type-iamges-text").addClass('active');
-            },500);
-            setTimeout(function () {
-                $("#example-list-type-iamges .example-list-type-iamges-text").children().addClass('active');
-            },800)
-            return typeof callback == 'function' && callback();
-        };
-        //解除动画
-        function removeMation(callback) {
-            $("#example-list-type-iamges li").removeClass('active');
-            $("#example-list-type-iamges .example-list-type-iamges-text").removeClass('active');
-            $("#example-list-type-iamges .example-list-type-iamges-text").children().removeClass('active');
-            return typeof callback == 'function' && callback();
-        }
-        //刷新页面显示
-        if ($(window).scrollTop() > 700) {
-            createMation();
-        }
-        //滚动显示动画
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > 700) {
-                createMation();
-            }
-        });
-        //全部
-        $("#example-list-type-text > .example-list-type-text-master li a").click(function () {
-            $(this).parent().addClass('active');
-            $("#example-list-type-text > .example-list-type-text-pics li").removeClass('active');
-        });
-        //子分类
-        $("#example-list-type-text > .example-list-type-text-pics li a").click(function () {
-            $(this).parent().addClass('active').siblings().removeClass('active');
-            $("#example-list-type-text > .example-list-type-text-master li").removeClass('active');
-        });
-        $("#example-list-type-text li a").click(function () {
-            removeMation();
-            setTimeout(function () {
-                createMation();
-            },100);
-        })
 
 
     })
