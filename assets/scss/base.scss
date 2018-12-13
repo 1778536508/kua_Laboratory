@@ -216,6 +216,7 @@ html,body,.box{
   margin: 0 auto;
   padding-top: 174px;
   padding-bottom: 152px;
+  font-family: "Sansation-Regular";
   h2 {
     font-family: Sansation-Regular;
     font-size: 60px;
@@ -268,6 +269,13 @@ html,body,.box{
     color: #e4e5e6;
   }
 }
+
+//字体
+@font-face{
+  font-family: 'Sansation-Regular';
+  src: url('../font/Sansation-Regular.ttf');
+}
+
 
 
 //回到顶部

@@ -153,7 +153,8 @@ html, body, .box {
   padding-left: 120px;
   margin: 0 auto;
   padding-top: 174px;
-  padding-bottom: 152px; }
+  padding-bottom: 152px;
+  font-family: "Sansation-Regular"; }
   .formmode-content-title h2 {
     font-family: Sansation-Regular;
     font-size: 60px;
@@ -199,6 +200,9 @@ html, body, .box {
     font-weight: bold;
     color: #e4e5e6; }
 
+@font-face {
+  font-family: 'Sansation-Regular';
+  src: url("../font/Sansation-Regular.ttf"); }
 .example-box {
   width: 100%;
   height: 100%;
@@ -245,20 +249,22 @@ html, body, .box {
           .example-content .example-banner .swiper-container .swiper-wrapper .swiper-slide .swiper-txt-box {
             width: 418px;
             height: 262px;
-            text-align: center;
+            text-align: left;
             box-shadow: 0 16px 46px 0 rgba(0, 0, 0, 0.04);
             position: absolute;
             top: 50%;
             margin-top: -131px;
             right: 132px;
             z-index: 1;
-            background: #FFFFFF; }
+            background: #FFFFFF;
+            box-sizing: border-box;
+            padding-left: 70px; }
             .example-content .example-banner .swiper-container .swiper-wrapper .swiper-slide .swiper-txt-box h3 {
               font-size: 40px;
               color: #000000;
               letter-spacing: 0;
               line-height: 40px;
-              text-align: center;
+              text-align: left;
               margin-top: 62px;
               margin-bottom: 32px; }
             .example-content .example-banner .swiper-container .swiper-wrapper .swiper-slide .swiper-txt-box p {
@@ -272,7 +278,8 @@ html, body, .box {
                 color: #000000;
                 letter-spacing: 0;
                 line-height: 22px;
-                margin-bottom: 46px; }
+                margin-bottom: 46px;
+                font-family: 'Sansation-Regular'; }
           .example-content .example-banner .swiper-container .swiper-wrapper .swiper-slide.active h3 {
             position: relative; }
             .example-content .example-banner .swiper-container .swiper-wrapper .swiper-slide.active h3:after {
@@ -340,7 +347,13 @@ html, body, .box {
         width: 300px;
         text-align: left;
         left: 132px;
-        font-weight: bold; }
+        font-weight: bold;
+        font-family: 'DIN-Medium';
+        opacity: 0.32;
+        font-size: 24px;
+        color: #000000;
+        letter-spacing: 0;
+        line-height: 24px; }
   .example-content .example-list-type {
     width: 100%;
     background: #F8F8F8;

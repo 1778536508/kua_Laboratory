@@ -52,6 +52,7 @@ html,body,.box{
       box-sizing: border-box;
       transform:skew(-30deg, 0);
       overflow: hidden;
+      font-family: 'Sansation-Regular';
       &.active {
         padding-top: 0;
         opacity: 1;

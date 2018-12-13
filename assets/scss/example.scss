@@ -44,7 +44,7 @@
           .swiper-txt-box {
             width: 418px;
             height: 262px;
-            text-align: center;
+            text-align: left;
             box-shadow: 0 16px 46px 0 rgba(0,0,0,0.04);
             @include pos();
             top: 50%;
@@ -52,12 +52,14 @@
             right: 132px;
             z-index: 1;
             background: #FFFFFF;
+            box-sizing: border-box;
+            padding-left: 70px;
             h3{
               font-size: 40px;
               color: #000000;
               letter-spacing: 0;
               line-height: 40px;
-              text-align: center;
+              text-align: left;
               margin-top: 62px;
               margin-bottom: 32px;
             }
@@ -73,6 +75,7 @@
                 letter-spacing: 0;
                 line-height: 22px;
                 margin-bottom: 46px;
+                font-family: 'Sansation-Regular';
               }
             }
           }
@@ -142,6 +145,12 @@
         text-align: left;
         left: 132px;
         font-weight: bold;
+        font-family: 'DIN-Medium';
+        opacity: 0.32;
+        font-size: 24px;
+        color: #000000;
+        letter-spacing: 0;
+        line-height: 24px;
       }
 
     }
