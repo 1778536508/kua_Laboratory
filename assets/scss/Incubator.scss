@@ -45,10 +45,11 @@
         height: 100%;
         box-sizing: border-box;
         padding-top: 70px;
-        padding-left: 56px;
+        //padding-left: 56px;
         background-image: linear-gradient(-70deg, #000000 0%, #292929 100%);
         @include pos(relative);
         cursor: pointer;
+        text-align: center;
         &.active {
           &:after {
             z-index: 1;
@@ -66,44 +67,67 @@
             margin: auto;
           }
         }
-        span {
-          display: block;
+        div {
+          display: inline-block;
           height: 38px;
-        }
-        &:nth-of-type(1) {
-          span {
-            @include back_images("../images/icon_kplustitle_1.png", auto, 100%)
+          margin: 0 auto;
+          img {
+            display: block;
+            height: 100%;
+            margin: 0 auto;
+          }
+          b {
+            display: block;
+            opacity: 0.64;
+            font-family: PingFangSC-Regular;
+            font-size: 24px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            line-height: 24px;
+            margin-top: 32px;
+            font-weight: 400;
+            text-align: left;
           }
         }
-        &:nth-of-type(2) {
-          span {
-            @include back_images("../images/icon_kplustitle_2.png", auto, 100%)
-          }
-        }
-        &:nth-of-type(3) {
-          span {
-            @include back_images("../images/icon_kplustitle_3.png", auto, 100%)
-          }
-        }
-        &:nth-of-type(4) {
-          span {
-            @include back_images("../images/icon_kplustitle_4.png", auto, 100%)
-          }
-        }
-        &:nth-of-type(5) {
-          span {
-            @include back_images("../images/icon_kplustitle_5.png", auto, 100%)
-          }
-        }
-        h2 {
-          opacity: 0.64;
-          font-family: PingFangSC-Regular;
-          font-size: 24px;
-          color: #FFFFFF;
-          letter-spacing: 0;
-          line-height: 24px;
-          margin-top: 32px;
-        }
+        //span {
+        //  display: block;
+        //  height: 38px;
+        //}
+        //&:nth-of-type(1) {
+        //  span {
+        //    @include back_images("../images/icon_kplustitle_1.png", auto, 100%)
+        //  }
+        //}
+        //&:nth-of-type(2) {
+        //  span {
+        //    @include back_images("../images/icon_kplustitle_2.png", auto, 100%)
+        //  }
+        //}
+        //&:nth-of-type(3) {
+        //  span {
+        //    @include back_images("../images/icon_kplustitle_3.png", auto, 100%)
+        //  }
+        //}
+        //&:nth-of-type(4) {
+        //  span {
+        //    @include back_images("../images/icon_kplustitle_4.png", auto, 100%)
+        //  }
+        //}
+        //&:nth-of-type(5) {
+        //  span {
+        //    @include back_images("../images/icon_kplustitle_5.png", auto, 100%)
+        //  }
+        //}
+        //h2 {
+        //  opacity: 0.64;
+        //  font-family: PingFangSC-Regular;
+        //  font-size: 24px;
+        //  color: #FFFFFF;
+        //  letter-spacing: 0;
+        //  line-height: 24px;
+        //  margin-top: 32px;
+        //  font-weight: 400;
+        //}
       }
     }
   }
