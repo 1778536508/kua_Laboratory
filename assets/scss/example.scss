@@ -228,6 +228,7 @@
               @include pos(relative);
               margin-bottom: 86px;
               overflow: hidden;
+              cursor: pointer;
               &:after {
                 content: "";
                 @include pos();

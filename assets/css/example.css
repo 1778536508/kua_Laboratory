@@ -418,7 +418,8 @@ html, body, .box {
               padding-left: 86px;
               position: relative;
               margin-bottom: 86px;
-              overflow: hidden; }
+              overflow: hidden;
+              cursor: pointer; }
               .example-content .example-list-type .example-list-type-box .example-list-type-box-childer .example-list-type-iamges ul li:after {
                 content: "";
                 position: absolute;

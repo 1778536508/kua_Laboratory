@@ -10,12 +10,14 @@
 
  (这个可以填可以不填，不写查全部)
  */
+const apiUrl = "http://101.201.37.50:8282/krc-admin/api/";   // 测试域名 (可修改)
 var config = {
     damin: {
-        example_name_Url: "http://101.201.37.50:8282/krc-admin/api/exampleTypes",    // 案例分类name接口
-        example_value_url: "http://101.201.37.50:8282/krc-admin/api/exampleList",    // 案例分类value接口
-        incubator_name_url: "http://101.201.37.50:8282/krc-admin/api/alTypes",      // 孵化器分类name接口
-        incubator_value_url: "http://101.201.37.50:8282/krc-admin/api/alList",     // 孵化器分类value接口
+        example_name_Url: apiUrl + "exampleTypes",    // 案例分类name接口
+        example_value_url: apiUrl + "exampleList",    // 案例分类value接口
+        incubator_name_url: apiUrl + "alTypes",      // 孵化器分类name接口
+        incubator_value_url: apiUrl + "alList",     // 孵化器分类value接口
+        details: apiUrl + "details",   // 详情
     },
     header: {
         0: {text: "首页", value: "/view/home/home.html"},
@@ -42,7 +44,7 @@ var config = {
                 0: {name: "商务合作", value: "info@tangux.com"},
             }}
     }
-}
+};
 
 
 /**

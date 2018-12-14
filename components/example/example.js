@@ -111,7 +111,7 @@ $(document).ready(function () {
         var strContent = '';
         if (res.result.length > 0) {
             res.result.forEach((v, i) => {
-                strContent += ` <li data_id="`+ v.id +`" type="`+ v.type +`" data_index="`+ i +`">
+                strContent += ` <li data_id="`+ v.id +`" type="`+ v.type +`" data_index="`+ i +`" data_list="2">
                                         <img src="`+ v.accessPath +`" alt="">
                                         <div class="example-list-type-iamges-text">
                                             <h3>`+ v.title +`</h3>
@@ -124,12 +124,27 @@ $(document).ready(function () {
         }
 
         $("#example-list-type-pics").html(strContent);
+
+        btnDetails();
     }
 
 
+    /**
+     * 点击进入详情
+     * @param callback
+     * @returns {boolean|*}
+     */
+    function btnDetails() {
+        $("#example-list-type-pics li").click(function () {
+           window.location.href = "http://" + window.location.host + "/view/details/details.html?id=" + $(this).attr('data_id') + "&list=" + $(this).attr('data_list');
+        })
+    }
 
-
-
+    
+    
+    
+    
+    
     // 添加动画
     function createMation(callback) {
         $("#example-list-type-iamges li").addClass('active');

@@ -285,6 +285,7 @@
             float: left;
             @include pos(relative);
             box-sizing: border-box;
+            cursor: pointer;
             &:nth-of-type(odd) {
               width: 40%;
             }
@@ -335,6 +336,7 @@
                 padding-left: 24px;
                 padding-top: 32px;
                 box-sizing: border-box;
+                overflow: hidden;
                 h2 {
                   opacity: 0.32;
                   font-family: Sansation-Regular;
@@ -359,7 +361,7 @@
                     background: #fff;
                   }
                 }
-                p {
+                div {
                   font-family: Sansation-Regular;
                   font-size: 14px;
                   color: #000000;

@@ -82,29 +82,43 @@ $(document).ready(function () {
         if (res.result.length > 0) {
             var strUl = '<ul>';
             res.result.forEach(( v, i) => {
-                strUl +=  `<li>
+                strUl +=  `<li data_id="`+ v.id +`" type="`+ v.type +`" data_index="`+ i +`" data_list="3">
                             <div class="Incubator-nov-img-img">
                                 <img src="`+ v.accessPath +`" alt="">
                             </div>
                             <div class="Incubator-nov-img-title">
                                 <div class="Incubator-nov-img-text">
                                     <h2>`+ v.title +`</h2>
-                                    <p>`+ v.content +`</p>
+                                    <div>`+ v.content +`</div>
                                 </div>
                             </div>
                         </li>`
                 if(i % 2 == 1) {
-                    strUl += '</ul><ul>'
+                    strUl += '</ul>';
+                    if(i+1 != res.result.length) {
+                        strUl += '<ul>'
+                    }
                 }
+
             })
             $("#Incubator-nov-img-box").html(strUl);
+            btnDetails();
         } else {
             $("#Incubator-nov-img-box").html('<div class="nodata"><a href="javascript:;">抠搜的,就这几条数据! 跟谁俩呢</a></div>');
         }
 
-
     }
 
+    /**
+     * 点击进入详情
+     * @param callback
+     * @returns {boolean|*}
+     */
+    function btnDetails() {
+        $("#Incubator-nov-img-box li").click(function () {
+            window.location.href = "http://" + window.location.host + "/view/details/details.html?id=" + $(this).attr('data_id') + "&list=" + $(this).attr('data_list');
+        })
+    }
 
 
 
@@ -114,14 +128,14 @@ $(document).ready(function () {
     function createMation(callback) {
         $("#Incubator-nov-img .Incubator-nov-img-img").addClass('active');
         $("#Incubator-nov-img h2").addClass('active');
-        $("#Incubator-nov-img p").addClass('active');
+        $("#Incubator-nov-img div").addClass('active');
         return typeof callback == 'function' && callback();
     };
     //解除动画
     function removeMation(callback) {
         $("#Incubator-nov-img .Incubator-nov-img-img").removeClass('active');
         $("#Incubator-nov-img h2").removeClass('active');
-        $("#Incubator-nov-img p").removeClass('active');
+        $("#Incubator-nov-img div").removeClass('active');
         return typeof callback == 'function' && callback();
     }
     //刷新页面显示
