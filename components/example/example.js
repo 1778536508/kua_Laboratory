@@ -115,7 +115,7 @@ $(document).ready(function () {
                                         <img src="`+ v.accessPath +`" alt="">
                                         <div class="example-list-type-iamges-text">
                                             <h3>`+ v.title +`</h3>
-                                            <p>`+ v.content +`</p>
+                                            <p>`+ v.intro +`</p>
                                         </div>
                                     </li>`
             })

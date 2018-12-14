@@ -89,7 +89,7 @@ $(document).ready(function () {
                             <div class="Incubator-nov-img-title">
                                 <div class="Incubator-nov-img-text">
                                     <h2>`+ v.title +`</h2>
-                                    <div>`+ v.content +`</div>
+                                    <p>`+ v.intro +`</p>
                                 </div>
                             </div>
                         </li>`
@@ -128,14 +128,14 @@ $(document).ready(function () {
     function createMation(callback) {
         $("#Incubator-nov-img .Incubator-nov-img-img").addClass('active');
         $("#Incubator-nov-img h2").addClass('active');
-        $("#Incubator-nov-img div").addClass('active');
+        $("#Incubator-nov-img p").addClass('active');
         return typeof callback == 'function' && callback();
     };
     //解除动画
     function removeMation(callback) {
         $("#Incubator-nov-img .Incubator-nov-img-img").removeClass('active');
         $("#Incubator-nov-img h2").removeClass('active');
-        $("#Incubator-nov-img div").removeClass('active');
+        $("#Incubator-nov-img p").removeClass('active');
         return typeof callback == 'function' && callback();
     }
     //刷新页面显示
