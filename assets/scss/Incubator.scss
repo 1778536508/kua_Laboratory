@@ -147,35 +147,42 @@
           width: 100%;
           .swiper-slide {
             width: 100%;
-            &>div {
-              width: 162px;
-              height: 84px;
-              margin: 0 auto;
-              background: #fff;
-              @include pos(relative);
-              img {
-                display: block;
-                width: 113px;
-                @include pos();
-                left: 0;
-                bottom: 0;
-                right: 0;
-                top: 0;
-                margin: auto;
+            cursor: pointer;
+            @include clearfix;
+            .swiper-slide-box {
+              float: left;
+              width: 20%;
+              &>div {
+                width: 162px;
+                height: 84px;
+                margin: 0 auto;
+                background: #fff;
+                @include pos(relative);
+                img {
+                  display: block;
+                  width: 113px;
+                  @include pos();
+                  left: 0;
+                  bottom: 0;
+                  right: 0;
+                  top: 0;
+                  margin: auto;
+                }
+              }
+              p {
+                text-align: center;
+                opacity: 0.56;
+                font-family: PingFangSC-Regular;
+                font-size: 14px;
+                color: #000000;
+                letter-spacing: 0;
+                text-align: center;
+                line-height: 14px;
+                text-align: center;
+                margin-top: 24px;
               }
             }
-            p {
-              text-align: center;
-              opacity: 0.56;
-              font-family: PingFangSC-Regular;
-              font-size: 14px;
-              color: #000000;
-              letter-spacing: 0;
-              text-align: center;
-              line-height: 14px;
-              text-align: center;
-              margin-top: 24px;
-            }
+
           }
         }
       }

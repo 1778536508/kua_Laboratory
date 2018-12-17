@@ -306,33 +306,42 @@ html, body, .box {
         .Incubator-content .Incubator-logo .Incubator-content-list-logo .swiper-container .swiper-wrapper {
           width: 100%; }
           .Incubator-content .Incubator-logo .Incubator-content-list-logo .swiper-container .swiper-wrapper .swiper-slide {
-            width: 100%; }
-            .Incubator-content .Incubator-logo .Incubator-content-list-logo .swiper-container .swiper-wrapper .swiper-slide > div {
-              width: 162px;
-              height: 84px;
-              margin: 0 auto;
-              background: #fff;
-              position: relative; }
-              .Incubator-content .Incubator-logo .Incubator-content-list-logo .swiper-container .swiper-wrapper .swiper-slide > div img {
-                display: block;
-                width: 113px;
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                top: 0;
-                margin: auto; }
-            .Incubator-content .Incubator-logo .Incubator-content-list-logo .swiper-container .swiper-wrapper .swiper-slide p {
-              text-align: center;
-              opacity: 0.56;
-              font-family: PingFangSC-Regular;
-              font-size: 14px;
-              color: #000000;
-              letter-spacing: 0;
-              text-align: center;
-              line-height: 14px;
-              text-align: center;
-              margin-top: 24px; }
+            width: 100%;
+            cursor: pointer;
+            zoom: 1; }
+            .Incubator-content .Incubator-logo .Incubator-content-list-logo .swiper-container .swiper-wrapper .swiper-slide:after {
+              display: block;
+              clear: both;
+              content: ''; }
+            .Incubator-content .Incubator-logo .Incubator-content-list-logo .swiper-container .swiper-wrapper .swiper-slide .swiper-slide-box {
+              float: left;
+              width: 20%; }
+              .Incubator-content .Incubator-logo .Incubator-content-list-logo .swiper-container .swiper-wrapper .swiper-slide .swiper-slide-box > div {
+                width: 162px;
+                height: 84px;
+                margin: 0 auto;
+                background: #fff;
+                position: relative; }
+                .Incubator-content .Incubator-logo .Incubator-content-list-logo .swiper-container .swiper-wrapper .swiper-slide .swiper-slide-box > div img {
+                  display: block;
+                  width: 113px;
+                  position: absolute;
+                  left: 0;
+                  bottom: 0;
+                  right: 0;
+                  top: 0;
+                  margin: auto; }
+              .Incubator-content .Incubator-logo .Incubator-content-list-logo .swiper-container .swiper-wrapper .swiper-slide .swiper-slide-box p {
+                text-align: center;
+                opacity: 0.56;
+                font-family: PingFangSC-Regular;
+                font-size: 14px;
+                color: #000000;
+                letter-spacing: 0;
+                text-align: center;
+                line-height: 14px;
+                text-align: center;
+                margin-top: 24px; }
   .Incubator-content .Incubator-swiper {
     overflow: hidden;
     width: 100%;
