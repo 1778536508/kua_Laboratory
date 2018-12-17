@@ -254,7 +254,15 @@ html, body, .box {
       .start-title .k2-star span.active {
         padding-top: 0;
         opacity: 1;
+        -webkit-transform: skew(0, 0);
+        -moz-transform: skew(0, 0);
+        -ms-transform: skew(0, 0);
+        -o-transform: skew(0, 0);
         transform: skew(0, 0);
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -ms-transition: all 1s;
+        -o-transition: all 1s;
         transition: all 1s; }
   .start-title .star-text {
     margin-top: 74px;
