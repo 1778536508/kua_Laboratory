@@ -150,5 +150,58 @@ $(document).ready(function () {
     });
 
 
+    /**
+     * logo_  分类
+     * @type {a|*}
+     */
+
+    function logoList(callback) {
+        var strLogo = '';
+        config.logoList.forEach((item, index) => {
+            strLogo += '<div class="swiper-slide">';
+            item.forEach((v, i) => {
+                strLogo +=  `<div class="swiper-slide-box">
+                                <div><img src="`+ v.imagUrl +`" alt=""></div>
+                                <p>`+ v.text +`</p>
+                            </div>`
+            })
+            strLogo += '</div>';
+        })
+        $("#Incubator-logo").html(strLogo);
+        return typeof callback == 'function' && callback();
+    }
+
+    /**
+     * 回调执行方法
+     */
+    logoList(function () {
+        var mySwiper = new Swiper('.swiper-container', {
+            onInit: function(event){
+                $('#Incubator-content-list > ul > li').eq(event.activeIndex).addClass('active').siblings().removeClass('active');
+            },
+            onSlideChangeEnd: function (event) {
+                $('#Incubator-content-list > ul > li').eq(event.activeIndex).addClass('active').siblings().removeClass('active');
+            }
+        })
+        $('#Incubator-content-list > ul > li').click(function () {
+            $(this).addClass('active').siblings().removeClass('active');
+            // console.log($(this).index());
+            mySwiper.slideTo($(this).index(), 300, true);
+        })
+    });
+
+    /**
+     * swiper 智能
+     */
+    var mySwiperType = new Swiper('.swiper-container-content',{
+        slidesPerView : 3,
+        // slidesPerGroup : 1,
+        freeMode : true,
+        keyboardControl : true,         // 键盘操作
+    })
+
+
+
+
 
 })

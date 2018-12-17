@@ -43,7 +43,40 @@ var config = {
             content: {
                 0: {name: "商务合作", value: "info@tangux.com"},
             }}
-    }
+    },
+    logoList: [
+        [
+            {imagUrl: '../../assets/images/icon_menu_logo_dark.png', text: '技术'},
+            {imagUrl: '../../assets/images/icon_menu_logo_dark.png', text: '技术'},
+            {imagUrl: '../../assets/images/icon_menu_logo_dark.png', text: '技术'},
+            {imagUrl: '../../assets/images/icon_menu_logo_dark.png', text: '技术'},
+            {imagUrl: '../../assets/images/icon_menu_logo_dark.png', text: '技术'}],
+        [
+            {imagUrl: '../../assets/images/icon_menu_logo_dark.png', text: '资金'},
+            {imagUrl: '../../assets/images/icon_menu_logo_dark.png', text: '资金'},
+            {imagUrl: '../../assets/images/icon_menu_logo_dark.png', text: '资金'},
+            {imagUrl: '../../assets/images/icon_menu_logo_dark.png', text: '资金'},
+            {imagUrl: '../../assets/images/icon_menu_logo_dark.png', text: '资金'}],
+        [
+            {imagUrl: '../../assets/images/icon_menu_logo_dark.png', text: '资源'},
+            {imagUrl: '../../assets/images/icon_menu_logo_dark.png', text: '资源'},
+            {imagUrl: '../../assets/images/icon_menu_logo_dark.png', text: '资源'},
+            {imagUrl: '../../assets/images/icon_menu_logo_dark.png', text: '资源'},
+            {imagUrl: '../../assets/images/icon_menu_logo_dark.png', text: '资源'}],
+        [
+            {imagUrl: '../../assets/images/icon_menu_logo_dark.png', text: '服务'},
+            {imagUrl: '../../assets/images/icon_menu_logo_dark.png', text: '服务'},
+            {imagUrl: '../../assets/images/icon_menu_logo_dark.png', text: '服务'},
+            {imagUrl: '../../assets/images/icon_menu_logo_dark.png', text: '服务'},
+            {imagUrl: '../../assets/images/icon_menu_logo_dark.png', text: '服务'}],
+        [
+            {imagUrl: '../../assets/images/icon_menu_logo_dark.png', text: '导师'},
+            {imagUrl: '../../assets/images/icon_menu_logo_dark.png', text: '导师'},
+            {imagUrl: '../../assets/images/icon_menu_logo_dark.png', text: '导师'},
+            {imagUrl: '../../assets/images/icon_menu_logo_dark.png', text: '导师'},
+            {imagUrl: '../../assets/images/icon_menu_logo_dark.png', text: '导师'}],
+    ]
+
 };
 
 
