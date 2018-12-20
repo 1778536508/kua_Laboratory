@@ -66,7 +66,7 @@ $(document).ready(function () {
             pageNo++;
             var resmas = '?typeId=' + pasmas + '&pageNo=' + pageNo;
             $http(config.damin.incubator_value_url, 1, resmas, function (res) {
-                openData(res);
+                openData(res, 1);
             })
         })
     }
@@ -77,10 +77,12 @@ $(document).ready(function () {
      * @param callback
      * @returns {boolean|*}
      */
-    function openData(res) {
+    function openData(res, type) {
         console.log('处理数据',res);
+        var strUl = '';
         if (res.result.length > 0) {
-            var strUl = '<ul>';
+            $("#Incubator-nov-img-buttom").css('display','block');
+            strUl += '<ul>';
             res.result.forEach(( v, i) => {
                 strUl +=  `<li data_id="`+ v.id +`" type="`+ v.type +`" data_index="`+ i +`" data_list="3">
                             <div class="Incubator-nov-img-img">
@@ -101,11 +103,20 @@ $(document).ready(function () {
                 }
 
             })
-            $("#Incubator-nov-img-box").html(strUl);
-            btnDetails();
+
         } else {
-            $("#Incubator-nov-img-box").html('<div class="nodata"><a href="javascript:;">抠搜的,就这几条数据! 跟谁俩呢</a></div>');
+            strUl += '<div class="nodata"><a href="javascript:;">暂无数据</a></div>';
+            $("#Incubator-nov-img-buttom").css('display','none')
         }
+
+        if (type) {
+            $("#Incubator-nov-img-box").append(strUl);
+        } else {
+            $("#Incubator-nov-img-box").html(strUl);
+        }
+
+
+        btnDetails();
 
     }
 

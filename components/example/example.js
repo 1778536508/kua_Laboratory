@@ -97,7 +97,7 @@ $(document).ready(function () {
             pageNo++;
             var resmas = '?typeId=' + pasmas + '&pageNo=' + pageNo;
             $http(config.damin.example_value_url, 1, resmas, function (res) {
-                openData(res);
+                openData(res, 1);
             })
         })
     }
@@ -107,9 +107,11 @@ $(document).ready(function () {
      * 处理数据
      * @data
      */
-    function openData(res) {
+    function openData(res, type) {
+
         var strContent = '';
         if (res.result.length > 0) {
+            $("#example-list-type-buttn").css('display', 'block');
             res.result.forEach((v, i) => {
                 strContent += ` <li data_id="`+ v.id +`" type="`+ v.type +`" data_index="`+ i +`" data_list="2">
                                         <img src="`+ v.accessPath +`" alt="">
@@ -120,10 +122,17 @@ $(document).ready(function () {
                                     </li>`
             })
         } else {
-            strContent = '<div class="nodata"><a href="javascript:;">抠搜的,就这几条数据! 跟谁俩呢</a></div>'
+            $("#example-list-type-buttn").css('display', 'none');
+            strContent = '<div class="nodata"><a href="javascript:;">暂无数据</a></div>'
         }
 
-        $("#example-list-type-pics").html(strContent);
+        if (type) {
+            $("#example-list-type-pics").append(strContent);
+        } else {
+            $("#example-list-type-pics").html(strContent);
+        }
+
+
 
         btnDetails();
     }
