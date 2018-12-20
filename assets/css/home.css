@@ -485,7 +485,7 @@ html, body, .box {
               transform: skew(0, 0);
               transition: all 1s; }
           .home-type ul li .home-type-txt p:nth-of-type(1) {
-            width: 380px;
+            width: 383px;
             opacity: 1;
             font-size: 32px;
             color: #000000;

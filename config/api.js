@@ -133,3 +133,14 @@ var $http = function (_url, _type, _data, callback) {
     }
 
 };
+
+
+/**
+ * 兼容处理
+ *  @compatible IE
+ */
+
+function isIE() { //ie?
+    if (!!window.ActiveXObject || "ActiveXObject" in window) { return true; }
+    else { return false; }
+}
