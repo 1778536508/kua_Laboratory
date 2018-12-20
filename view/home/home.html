@@ -27,7 +27,7 @@
         <div class="home-view-content">
             <div class="home-content">
                 <div class="home-content-background">
-                    <img src="../../assets/images/img_header_heroimg.png" alt="">
+                    <img src="../../assets/images/img_header_heroimg.png" alt="" id="img">
                 </div>
                 <div class="home-banner-box">
                     <div class="home-banner">
@@ -402,19 +402,5 @@
 <script>
     $(document).ready(function () {
         $('#header-title-pics > li:nth-of-type(1)').addClass('active');
-        var titleClass = $('#home-title span');
-        var s1 = 100;
-        for(let i = 1; i <= titleClass.length; i++) {
-            setTimeout(function () {
-                $('#home-title span:nth-of-type('+ i +')').addClass('active');
-            },(s1 + (i * 200)))
-        }
-        var textClass = $("#home-text span");
-        var s2 = 2500;
-        for(let i = 1; i <= textClass.length; i++) {
-            setTimeout(function () {
-                $("#home-text span:nth-of-type("+ i +")").addClass('active');
-            }, (s2 + (i * 10)))
-        }
     })
 </script>
