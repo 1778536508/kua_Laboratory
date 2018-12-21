@@ -31,17 +31,17 @@ var config = {
         1: {text: "京ICP备16065072号-1"},
         2: {text: "Let’s talk",
             content:{
-                0: {name: "电话", value: "+86-21-60746536"},
-                1: {name: "公关媒体", value: "pr@tangux.com"}
+                0: {name: "电话", value: "+86-010-64332582"},
+                1: {name: "商务合作", value: "info@k2star.ai"}
             }},
-        3: {text: "Hey@Krc.ai",
+        3: {text: "Hey@k2star.ai",
             content: {
-                0: {name: "传真", value: "+86-21-60746500"},
-                1: {name: "简历投递", value: "hr@tangux.com"}
+                0: {name: "微信", value: "NewCoking"},
+                1: {name: "简历投递", value: "hr@k2star.ai"}
             }},
         4: {text: "",
             content: {
-                0: {name: "商务合作", value: "info@tangux.com"},
+                0: {name: "BP投递", value: "bp@k2star.ai"},
             }}
     },
     logoList: [
