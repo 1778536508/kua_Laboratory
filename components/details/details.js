@@ -4,7 +4,7 @@ $(document).ready(function () {
     // 获取参数
     var pasmas = window.location.href.split('?id=')[1].split('&list=');
     // 默认选项
-    console.log(pasmas[1])
+    // console.log(pasmas[1])
     $('#header-title-pics > li:nth-of-type('+ pasmas[1] +')').addClass('active');
     /**
      * 刷新页面调用内容接口
@@ -19,7 +19,6 @@ $(document).ready(function () {
      *  @data
      */
     function openData(res) {
-        console.log(res);
         $("#details-title").html(res.title);
         $("#details-content").html(res.content);
     };
