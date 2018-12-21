@@ -75,7 +75,142 @@ var config = {
             {imagUrl: '../../assets/images/icon_menu_logo_dark.png', text: '导师'},
             {imagUrl: '../../assets/images/icon_menu_logo_dark.png', text: '导师'},
             {imagUrl: '../../assets/images/icon_menu_logo_dark.png', text: '导师'}],
-    ]
+    ],
+    aboutBanner: [
+        {
+            images: '../../assets/images/1.png',
+            title: '柳科',
+            info: '科技、人文、梦想家',
+            content1: 'K² Star（夸克星科技人文实验室）创始人，也是国内用户研究、人机交互、文化互联网跨领域专家。K² Star 旨在通过科技与人文交融与碰撞，寻找下一个十年的趋势型产品。',
+            content2: '奇虎 360 前研究、人机交互设计团负责人，众多亿级用户产品创新；小牛电动车前智能产品总监，产品众筹记录全国第 1；联合国教科文非遗大数据平台首席设计师，首届 DIICH 杯设计大赛执行主席；中国国家地理·地道风物前首席产品官；唐硕咨询机构、联想研究院 URC 前研究员；香港大学 ICB 首届杰出校友、南开大学 MBA 导师；香港大学紫荆共创会会长，中关村天使营成员；双鱼座、爱吃辣、铁人三项爱好者。'
+        },
+        {
+            images: '../../assets/images/2.png',
+            title: '柳科',
+            info: '科技、人文、梦想家',
+            content1: 'K² Star（夸克星科技人文实验室）创始人，也是国内用户研究、人机交互、文化互联网跨领域专家。K² Star 旨在通过科技与人文交融与碰撞，寻找下一个十年的趋势型产品。',
+            content2: '奇虎 360 前研究、人机交互设计团负责人，众多亿级用户产品创新；小牛电动车前智能产品总监，产品众筹记录全国第 1；联合国教科文非遗大数据平台首席设计师，首届 DIICH 杯设计大赛执行主席；中国国家地理·地道风物前首席产品官；唐硕咨询机构、联想研究院 URC 前研究员；香港大学 ICB 首届杰出校友、南开大学 MBA 导师；香港大学紫荆共创会会长，中关村天使营成员；双鱼座、爱吃辣、铁人三项爱好者。'
+        },
+        {
+            images: '../../assets/images/3.png',
+            title: '柳科',
+            info: '科技、人文、梦想家',
+            content1: 'K² Star（夸克星科技人文实验室）创始人，也是国内用户研究、人机交互、文化互联网跨领域专家。K² Star 旨在通过科技与人文交融与碰撞，寻找下一个十年的趋势型产品。',
+            content2: '奇虎 360 前研究、人机交互设计团负责人，众多亿级用户产品创新；小牛电动车前智能产品总监，产品众筹记录全国第 1；联合国教科文非遗大数据平台首席设计师，首届 DIICH 杯设计大赛执行主席；中国国家地理·地道风物前首席产品官；唐硕咨询机构、联想研究院 URC 前研究员；香港大学 ICB 首届杰出校友、南开大学 MBA 导师；香港大学紫荆共创会会长，中关村天使营成员；双鱼座、爱吃辣、铁人三项爱好者。'
+        },
+        {
+            images: '../../assets/images/4.png',
+            title: '柳科',
+            info: '科技、人文、梦想家',
+            content1: 'K² Star（夸克星科技人文实验室）创始人，也是国内用户研究、人机交互、文化互联网跨领域专家。K² Star 旨在通过科技与人文交融与碰撞，寻找下一个十年的趋势型产品。',
+            content2: '奇虎 360 前研究、人机交互设计团负责人，众多亿级用户产品创新；小牛电动车前智能产品总监，产品众筹记录全国第 1；联合国教科文非遗大数据平台首席设计师，首届 DIICH 杯设计大赛执行主席；中国国家地理·地道风物前首席产品官；唐硕咨询机构、联想研究院 URC 前研究员；香港大学 ICB 首届杰出校友、南开大学 MBA 导师；香港大学紫荆共创会会长，中关村天使营成员；双鱼座、爱吃辣、铁人三项爱好者。'
+        },
+        {
+            images: '../../assets/images/5.png',
+            title: '柳科',
+            info: '科技、人文、梦想家',
+            content1: 'K² Star（夸克星科技人文实验室）创始人，也是国内用户研究、人机交互、文化互联网跨领域专家。K² Star 旨在通过科技与人文交融与碰撞，寻找下一个十年的趋势型产品。',
+            content2: '奇虎 360 前研究、人机交互设计团负责人，众多亿级用户产品创新；小牛电动车前智能产品总监，产品众筹记录全国第 1；联合国教科文非遗大数据平台首席设计师，首届 DIICH 杯设计大赛执行主席；中国国家地理·地道风物前首席产品官；唐硕咨询机构、联想研究院 URC 前研究员；香港大学 ICB 首届杰出校友、南开大学 MBA 导师；香港大学紫荆共创会会长，中关村天使营成员；双鱼座、爱吃辣、铁人三项爱好者。'
+        },
+    ],
+    aboutList:{
+        list1: [
+            {
+                images: '../../assets/images/1.png',
+                name: 'Kevin yu',
+                info: '前端架构师'
+            },
+            {
+                images: '../../assets/images/2.png',
+                name: 'Kevin yu',
+                info: '前端架构师'
+            },
+            {
+                images: '../../assets/images/3.png',
+                name: 'Kevin yu',
+                info: '前端架构师'
+            },
+            {
+                images: '../../assets/images/4.png',
+                name: 'Kevin yu',
+                info: '前端架构师'
+            },
+            {
+                images: '../../assets/images/5.png',
+                name: 'Kevin yu',
+                info: '前端架构师'
+            },
+            {
+                images: '../../assets/images/6.png',
+                name: 'Kevin yu',
+                info: '前端架构师'
+            },
+        ],
+        list2: [
+            {
+                images: '../../assets/images/7.png',
+                name: 'Kevin yu',
+                info: '前端架构师'
+            },
+            {
+                images: '../../assets/images/8.png',
+                name: 'Kevin yu',
+                info: '前端架构师'
+            },
+            {
+                images: '../../assets/images/9.png',
+                name: 'Kevin yu',
+                info: '前端架构师'
+            },
+            {
+                images: '../../assets/images/10.png',
+                name: 'Kevin yu',
+                info: '前端架构师'
+            },
+            {
+                images: '../../assets/images/11.png',
+                name: 'Kevin yu',
+                info: '前端架构师'
+            },
+            {
+                images: '../../assets/images/12.png',
+                name: 'Kevin yu',
+                info: '前端架构师'
+            },
+        ],
+        list3: [
+            {
+                images: '../../assets/images/13.png',
+                name: 'Kevin yu',
+                info: '前端架构师'
+            },
+            {
+                images: '../../assets/images/14.png',
+                name: 'Kevin yu',
+                info: '前端架构师'
+            },
+            {
+                images: '../../assets/images/15.png',
+                name: 'Kevin yu',
+                info: '前端架构师'
+            },
+            {
+                images: '../../assets/images/16.png',
+                name: 'Kevin yu',
+                info: '前端架构师'
+            },
+            {
+                images: '../../assets/images/17.png',
+                name: 'Kevin yu',
+                info: '前端架构师'
+            },
+            {
+                images: '../../assets/images/18.png',
+                name: 'Kevin yu',
+                info: '前端架构师'
+            },
+        ],
+    }
 
 };
 

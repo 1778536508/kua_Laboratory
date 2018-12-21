@@ -276,7 +276,12 @@ html, body, .box {
         .Incubator-content .Incubator-content-list ul li div {
           display: inline-block;
           height: 38px;
-          margin: 0 auto; }
+          margin: 0 auto;
+          zoom: 1; }
+          .Incubator-content .Incubator-content-list ul li div:after {
+            display: block;
+            clear: both;
+            content: ''; }
           .Incubator-content .Incubator-content-list ul li div img {
             display: block;
             height: 100%;
@@ -292,6 +297,27 @@ html, body, .box {
             margin-top: 32px;
             font-weight: 400;
             text-align: left; }
+          .Incubator-content .Incubator-content-list ul li div span {
+            display: block;
+            width: 100px;
+            height: 100px;
+            float: right;
+            margin-top: 40px; }
+        .Incubator-content .Incubator-content-list ul li:nth-of-type(1) div span {
+          background: url("../images/img_kplus_shape5.png") no-repeat;
+          background-size: 100% 100%; }
+        .Incubator-content .Incubator-content-list ul li:nth-of-type(2) div span {
+          background: url("../images/img_kplus_shape4.png") no-repeat;
+          background-size: 100% 100%; }
+        .Incubator-content .Incubator-content-list ul li:nth-of-type(3) div span {
+          background: url("../images/img_kplus_shape3.png") no-repeat;
+          background-size: 100% 100%; }
+        .Incubator-content .Incubator-content-list ul li:nth-of-type(4) div span {
+          background: url("../images/img_kplus_shape2.png") no-repeat;
+          background-size: 100% 100%; }
+        .Incubator-content .Incubator-content-list ul li:nth-of-type(5) div span {
+          background: url("../images/img_kplus_shape1.png") no-repeat;
+          background-size: 100% 100%; }
   .Incubator-content .Incubator-logo {
     width: 100%;
     box-sizing: border-box;

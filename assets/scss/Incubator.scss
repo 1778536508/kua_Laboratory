@@ -71,6 +71,7 @@
           display: inline-block;
           height: 38px;
           margin: 0 auto;
+          @include clearfix;
           img {
             display: block;
             height: 100%;
@@ -87,6 +88,48 @@
             margin-top: 32px;
             font-weight: 400;
             text-align: left;
+          }
+          span {
+            display: block;
+            width: 100px;
+            height: 100px;
+            float: right;
+            margin-top: 40px;
+          }
+        }
+        &:nth-of-type(1) {
+          div {
+            span {
+              @include back_images('../images/img_kplus_shape5.png', 100%, 100%);
+            }
+          }
+        }
+        &:nth-of-type(2) {
+          div {
+            span {
+              @include back_images('../images/img_kplus_shape4.png', 100%, 100%);
+            }
+          }
+        }
+        &:nth-of-type(3) {
+          div {
+            span {
+              @include back_images('../images/img_kplus_shape3.png', 100%, 100%);
+            }
+          }
+        }
+        &:nth-of-type(4) {
+          div {
+            span {
+              @include back_images('../images/img_kplus_shape2.png', 100%, 100%);
+            }
+          }
+        }
+        &:nth-of-type(5) {
+          div {
+            span {
+              @include back_images('../images/img_kplus_shape1.png', 100%, 100%);
+            }
           }
         }
         //span {
