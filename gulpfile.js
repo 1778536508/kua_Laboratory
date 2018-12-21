@@ -132,3 +132,13 @@ gulp.task('htmlmin', function(){
 
 
 gulp.task('default', ['server', 'useref']);
+gulp.task('build', [
+    'useref-index',
+    'useref-home',
+    'useref-example',
+    'useref-Incubator',
+    'useref-formmode',
+    'useref-aboutUs',
+    'useref-details',
+    'htmlmin',
+    'minifyCSS']);
