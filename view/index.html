@@ -76,7 +76,27 @@
                 $("#start-btn").addClass('active');
             },1000)
         }
-        textAnsion($("#k2-star span"), $("#star-text span"), 0, 500)
+
+
+        $('body').css('display', 'none');
+        function fntart() {
+            // var img=new Image();
+            // img.src='../assets/images/img_coverpage_backgroundimg.png';
+            // console.log(img)
+
+            var avatar=$(".start-background").css("background-image");
+            var imgUrl=avatar.match(/url\("(\S*)"\)/)[1];
+            var img = new Image();
+            img.src = imgUrl;
+            if(img.width==0){
+                window.location.reload();
+            }else{
+                $('body').css('display', 'block');
+                textAnsion($("#k2-star span"), $("#star-text span"), 0, 500);
+            }
+        }
+        fntart();
+
 
     })
 

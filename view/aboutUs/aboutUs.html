@@ -408,122 +408,112 @@
 
 
 <script>
-
     $(document).ready(function () {
         $('#header-title-pics > li:nth-of-type(5)').addClass('active');
-        var mySwiper = new Swiper('.swiper-container', {
-            loop: true,
-            autoplay: 3000,//可选选项，自动滑动
-            slidesPerView : 3,
-            slidesPerGroup : 1,
-            spaceBetween : 200,
-            centeredSlides : true,
-            slidesOffsetBefore : -400,
-            onInit: function(swiper1) {    // 初始化回调
-                $(".swiper-slide").eq(swiper1.activeIndex).addClass('active').siblings().removeClass('active');
-            },
-            onSlideChangeStart:function (swiper) {      // 每次切换回调
-                $(".swiper-slide").eq(swiper.activeIndex).addClass('active').siblings().removeClass('active');
-            },
-        })
-        /**
-         * 无缝轮播
-         * @type {a|*}
-         */
-        var mySwiper1 = new Swiper('.swiper-container-images1', {
-            autoplayDisableOnInteraction : false,
-            grabCursor: true,//鼠标光标
-            speed: 1000,
-            loop : true,
-            freeMode : true,
-            freeModeMomentum : false,
-            slidesPerView : 5,
-            autoplay: 1,
+        $('body').css('display', 'none');
+        // 判断图片加载状况，加载完成后回调
+        isImgLoad(function() {
+            $('body').css('display', 'block');
+            var mySwiper = new Swiper('.swiper-container', {
+                loop: true,
+                autoplay: 3000,//可选选项，自动滑动
+                slidesPerView: 3,
+                slidesPerGroup: 1,
+                spaceBetween: 200,
+                centeredSlides: true,
+                slidesOffsetBefore: -400,
+                onInit: function (swiper1) {    // 初始化回调
+                    $(".swiper-slide").eq(swiper1.activeIndex).addClass('active').siblings().removeClass('active');
+                },
+                onSlideChangeStart: function (swiper) {      // 每次切换回调
+                    $(".swiper-slide").eq(swiper.activeIndex).addClass('active').siblings().removeClass('active');
+                },
+            })
+            /**
+             * 无缝轮播
+             * @type {a|*}
+             */
+            var mySwiper1 = new Swiper('.swiper-container-images1', {
+                autoplayDisableOnInteraction: false,
+                grabCursor: true,//鼠标光标
+                speed: 1000,
+                loop: true,
+                freeMode: true,
+                freeModeMomentum: false,
+                slidesPerView: 5,
+                autoplay: 1,
 
-        })
-        var mySwiper2 = new Swiper('.swiper-container-images2', {
-            autoplayDisableOnInteraction : false,
-            grabCursor: true,//鼠标光标
-            speed: 2000,
-            loop : true,
-            freeMode : true,
-            slidesPerView : 5,
-            autoplay: 1,
-        })
-        var mySwiper3 = new Swiper('.swiper-container-images3', {
-            autoplayDisableOnInteraction : false,
-            grabCursor: true,//鼠标光标
-            speed: 1500,
-            loop : true,
-            freeMode : true,
-            slidesPerView : 5,
-            autoplay: 1,
-        })
-
-
-        //移入swiper停止轮播
-        $("#swiper-container-images1 .swiper-wrapper").hover(function () {
-            mySwiper1.stopAutoplay();
-        },function () {
-            mySwiper1.startAutoplay();
-        })
-        $("#swiper-container-images2 .swiper-wrapper").hover(function () {
-            mySwiper2.stopAutoplay();
-        },function () {
-            mySwiper2.startAutoplay();
-        })
-        $("#swiper-container-images3 .swiper-wrapper").hover(function () {
-            mySwiper3.stopAutoplay();
-        },function () {
-            mySwiper3.startAutoplay();
-        })
+            })
+            var mySwiper2 = new Swiper('.swiper-container-images2', {
+                autoplayDisableOnInteraction: false,
+                grabCursor: true,//鼠标光标
+                speed: 2000,
+                loop: true,
+                freeMode: true,
+                slidesPerView: 5,
+                autoplay: 1,
+            })
+            var mySwiper3 = new Swiper('.swiper-container-images3', {
+                autoplayDisableOnInteraction: false,
+                grabCursor: true,//鼠标光标
+                speed: 1500,
+                loop: true,
+                freeMode: true,
+                slidesPerView: 5,
+                autoplay: 1,
+            })
 
 
+            //移入swiper停止轮播
+            $("#swiper-container-images1 .swiper-wrapper").hover(function () {
+                mySwiper1.stopAutoplay();
+            }, function () {
+                mySwiper1.startAutoplay();
+            })
+            $("#swiper-container-images2 .swiper-wrapper").hover(function () {
+                mySwiper2.stopAutoplay();
+            }, function () {
+                mySwiper2.startAutoplay();
+            })
+            $("#swiper-container-images3 .swiper-wrapper").hover(function () {
+                mySwiper3.stopAutoplay();
+            }, function () {
+                mySwiper3.startAutoplay();
+            })
 
 
+            // 添加动画
+            function createMation(callback) {
+                $("#aboutUs-content-Culture .aboutUs-content-Culture-backimg").addClass('active');
+                setTimeout(function () {
+                    $("#aboutUs-content-Culture li").addClass('active');
+                }, 500);
+                setTimeout(function () {
+                    $("#aboutUs-content-Culture .obox").addClass('active');
+                }, 800)
+                return typeof callback == 'function' && callback();
+            };
 
+            //解除动画
+            function removeMation(callback) {
+                $("#aboutUs-content-Culture .aboutUs-content-Culture-backimg").removeClass('active');
+                $("#aboutUs-content-Culture > ul > li").removeClass('active');
+                $("#aboutUs-content-Culture .obox").removeClass('active');
+                return typeof callback == 'function' && callback();
+            }
 
-
-        // 添加动画
-        function createMation(callback) {
-            $("#aboutUs-content-Culture .aboutUs-content-Culture-backimg").addClass('active');
-            setTimeout(function () {
-                $("#aboutUs-content-Culture li").addClass('active');
-            },500);
-            setTimeout(function () {
-                $("#aboutUs-content-Culture .obox").addClass('active');
-            },800)
-            return typeof callback == 'function' && callback();
-        };
-        //解除动画
-        function removeMation(callback) {
-            $("#aboutUs-content-Culture .aboutUs-content-Culture-backimg").removeClass('active');
-            $("#aboutUs-content-Culture > ul > li").removeClass('active');
-            $("#aboutUs-content-Culture .obox").removeClass('active');
-            return typeof callback == 'function' && callback();
-        }
-        //刷新页面显示
-        if ($(window).scrollTop() > 4400) {
-            createMation();
-        }
-        //滚动显示动画
-        $(window).scroll(function () {
+            //刷新页面显示
             if ($(window).scrollTop() > 4400) {
                 createMation();
             }
-        });
+            //滚动显示动画
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 4400) {
+                    createMation();
+                }
+            });
 
-
-
-
-
-
-
-
-
-
-
-
+        })
 
     })
 

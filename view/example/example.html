@@ -95,34 +95,6 @@
 <script>
     $(document).ready(function () {
         $('#header-title-pics > li:nth-of-type(2)').addClass('active');
-        var mySwiper = new Swiper('.swiper-container', {
-            loop : true,
-            // effect : 'fade',
-            autoplay: 5000,//可选选项，自动滑动
-            prevButton:'.swiper-button-prev',
-            nextButton:'.swiper-button-next',
-            pagination : '.swiper-pagination',
-            paginationType : 'custom',
-            keyboardControl : true,         // 键盘操作
-            paginationCustomRender: function (swiper, current, total) {
-                var iscurrent, istotal;
-                current = current < 9 ? '0' + current : current;
-                total = total < 9 ? '0' + total : total;
-                return current + ' / ' + total;
-            },
-            onInit: function(swiper1) {    // 初始化回调
-                // console.log('swiper1',swiper1.activeIndex)
-                $(".swiper-container .swiper-slide").eq(swiper1.activeIndex).addClass('active').siblings().removeClass('active');
-            },
-            onSlideChangeStart:function (swiper) {      // 每次切换回调
-                // console.log('swiper',swiper.activeIndex)
-                $(".swiper-container .swiper-slide").eq(swiper.activeIndex).addClass('active').siblings().removeClass('active');
-            },
-        })
-
-
-
-
     })
 
 </script>

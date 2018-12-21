@@ -263,6 +263,11 @@
         $(".formmode-content-joinus-list li").click(function () {
             $(this).addClass('active').siblings().removeClass('active');
         })
+        $('body').css('display', 'none');
+        // 判断图片加载状况，加载完成后回调
+        isImgLoad(function() {
+            $('body').css('display', 'block');
+        })
     })
 
 </script>

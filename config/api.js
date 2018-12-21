@@ -88,7 +88,7 @@ var config = {
  * @param callback
  */
 var $http = function (_url, _type, _data, callback) {
-    console.log('pasmas=>', _url, _type, _data);
+    // console.log('pasmas=>', _url, _type, _data);
 
 
     if (_type == 1) {
@@ -97,7 +97,7 @@ var $http = function (_url, _type, _data, callback) {
             type: "GET", //请求的方式'GET'或'POST'
             dataType: "json",//设置返回内容的数据类型
             success:function(res){//响应成功后执行的回调函数
-                console.log("请求成功=>",res);
+                // console.log("请求成功=>",res);
                 return typeof callback == 'function' && callback(res);
             },
             beforeSend : function(){//请求开始之前触发该事件
@@ -105,7 +105,7 @@ var $http = function (_url, _type, _data, callback) {
             complete : function(){//请求结束之后触发该事件
             },
             error: function(err){//响应失败时执行的错误处理函数,会传三个参数，xhr对象，错误信息，错误类型
-                console.log("请求失败=>",err)
+                // console.log("请求失败=>",err)
                 return typeof callback == 'function' && callback(err);
             },
 
@@ -117,7 +117,7 @@ var $http = function (_url, _type, _data, callback) {
             data: _data,      //提交的信息
             dataType: "json",//设置返回内容的数据类型
             success:function(res){//响应成功后执行的回调函数
-                console.log("请求成功=>",res);
+                // console.log("请求成功=>",res);
                 return typeof callback == 'function' && callback(res);
             },
             beforeSend : function(){//请求开始之前触发该事件
@@ -125,7 +125,7 @@ var $http = function (_url, _type, _data, callback) {
             complete : function(){//请求结束之后触发该事件
             },
             error: function(err){//响应失败时执行的错误处理函数,会传三个参数，xhr对象，错误信息，错误类型
-                console.log("请求失败=>",err)
+                // console.log("请求失败=>",err)
                 return typeof callback == 'function' && callback(err);
             },
 
@@ -144,3 +144,35 @@ function isIE() { //ie?
     if (!!window.ActiveXObject || "ActiveXObject" in window) { return true; }
     else { return false; }
 }
+
+
+/**
+ * 封装
+ *    图片加载完成回调
+ */
+var t_img; // 定时器
+var isLoad = true; // 控制变量
+// 判断图片加载的函数
+var isImgLoad = function(callback) {
+    // 注意我的图片类名都是cover，因为我只需要处理cover。其它图片可以不管。
+    // 查找所有封面图，迭代处理
+    $('img').each(function(){
+        // 找到为0就将isLoad设为false，并退出each
+        if(this.height === 0){
+            isLoad = false;
+            return false;
+        }
+    });
+    // 为true，没有发现为0的。加载完毕
+    if(isLoad){
+        clearTimeout(t_img); // 清除定时器
+        // 回调函数
+        callback();
+        // 为false，因为找到了没有加载完成的图，将调用定时器递归
+    }else{
+        isLoad = true;
+        t_img = setTimeout(function(){
+            isImgLoad(callback); // 递归扫描
+        },500); // 我这里设置的是500毫秒就扫描一次，可以自己调整
+    }
+};
