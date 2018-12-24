@@ -35,7 +35,7 @@ $(document).ready(function () {
                             <div class="footer-txt-content active">
                                 <span>`+config.footer[4].content[0].name+`</span>
                                 <p>`+config.footer[4].content[0].value+`</p>
-                            </div>
+                            </div> 
                         </li>
                     </ul>
                 </li>
