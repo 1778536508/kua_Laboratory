@@ -132,7 +132,7 @@ K + 孵化器
   margin: 0;
   padding: 0; }
 
-html, body, .box, .aboutUs-content-image > div .swiper-wrapper > div .swiper-slide-txt, .aboutUs-content-image > div .swiper-wrapper > div .swiper-slide-txt > div, .aboutUs-content-Culture .aboutUs-content-Culture-box .aboutUs-content-Culture-backimg:after, .aboutUs-content-Culture .aboutUs-content-Culture-box .boutUs-content-Culture-text ul li div:after {
+html, body, .box, .aboutUs-content-image > div .swiper-wrapper > div .swiper-slide-table, .aboutUs-content-image > div .swiper-wrapper > div .swiper-slide-txt, .aboutUs-content-image > div .swiper-wrapper > div .swiper-slide-txt > div, .aboutUs-content-Culture .aboutUs-content-Culture-box .aboutUs-content-Culture-backimg:after, .aboutUs-content-Culture .aboutUs-content-Culture-box .boutUs-content-Culture-text ul li div:after {
   width: 100%;
   height: 100%; }
 
@@ -380,7 +380,8 @@ html, body, .box {
         .aboutUs-content-image > div .swiper-wrapper > div img {
           display: block;
           width: 100%; }
-        .aboutUs-content-image > div .swiper-wrapper > div .swiper-slide-txt {
+        .aboutUs-content-image > div .swiper-wrapper > div .swiper-slide-table {
+          height: 102%;
           opacity: 0;
           transition: all .5s;
           position: absolute;
@@ -391,10 +392,14 @@ html, body, .box {
           margin: auto;
           box-sizing: border-box;
           padding: 0 30px; }
+        .aboutUs-content-image > div .swiper-wrapper > div .swiper-slide-txt {
+          background: #F8F8F8;
+          display: table; }
           .aboutUs-content-image > div .swiper-wrapper > div .swiper-slide-txt > div {
-            padding: 47px 0 0 48px;
-            background: #F8F8F8;
-            box-sizing: border-box; }
+            box-sizing: border-box;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center; }
           .aboutUs-content-image > div .swiper-wrapper > div .swiper-slide-txt h2 {
             font-family: Sansation-Regular;
             font-size: 20px;
@@ -408,8 +413,9 @@ html, body, .box {
             color: #000000;
             letter-spacing: 0;
             line-height: 12px;
-            margin-top: 53px; }
-        .aboutUs-content-image > div .swiper-wrapper > div:hover .swiper-slide-txt {
+            margin-top: 25px;
+            margin-left: -19px; }
+        .aboutUs-content-image > div .swiper-wrapper > div:hover .swiper-slide-table {
           opacity: 1;
           transition: all .5s; }
 
