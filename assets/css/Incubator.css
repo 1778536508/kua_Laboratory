@@ -301,8 +301,9 @@ html, body, .box {
             display: block;
             width: 100px;
             height: 100px;
-            float: right;
-            margin-top: 40px; }
+            position: absolute;
+            bottom: 100px;
+            right: 70px; }
         .Incubator-content .Incubator-content-list ul li:nth-of-type(1) div span {
           background: url("../images/img_kplus_shape5.png") no-repeat;
           background-size: 100% 100%; }

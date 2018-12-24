@@ -36,7 +36,7 @@ $(document).ready(function () {
          */
         var resmas = '?typeId=' + pasmas + '&pageNo=' + pageNo;
         $http(config.damin.incubator_value_url, 1, resmas, function (res) {
-            openData(res);
+            openData(res, 3);
         })
 
         /**
@@ -52,7 +52,7 @@ $(document).ready(function () {
                 // console.log('pasmas', pasmas);
                 var resmas = '?typeId=' + pasmas + '&pageNo=' + pageNo;
                 $http(config.damin.incubator_value_url, 1, resmas, function (res) {
-                    openData(res);
+                    openData(res, 2);
                 })
 
 
@@ -112,18 +112,33 @@ $(document).ready(function () {
                 $("#Incubator-nov-img-buttom").css('display', 'none')
             }
 
-            if (type) {
-                $("#Incubator-nov-img-box").append(strUl);
-                //切换选项触发动画
-                createMation();
-            } else {
-                $("#Incubator-nov-img-box").html(strUl);
-                //切换选项触发动画
-                removeMation();
-                setTimeout(function () {
+
+
+            switch (type) {
+                case 1:    // 点击更多添加数据及动画
+                    $("#Incubator-nov-img-box").append(strUl);
+                    //切换选项触发动画
                     createMation();
-                }, 100)
+                break;
+                case 2:    // 点击选项更换数据及动画
+                    $("#Incubator-nov-img-box").html(strUl);
+                    //切换选项触发动画
+                    removeMation();
+                    setTimeout(function () {
+                        createMation();
+                    }, 100)
+                break;
+                case 3:    // 刷新页面是否在数据位置
+                    $("#Incubator-nov-img-box").html(strUl);
+                    //刷新页面显示
+                    setTimeout(function () {
+                        if ($(window).scrollTop() > 1400) {
+                            createMation();
+                        }
+                    },30)
+                break;
             }
+
 
 
             btnDetails();
@@ -159,10 +174,6 @@ $(document).ready(function () {
             return typeof callback == 'function' && callback();
         }
 
-        //刷新页面显示
-        if ($(window).scrollTop() > 1400) {
-            createMation();
-        }
         //滚动显示动画
         $(window).scroll(function () {
             if ($(window).scrollTop() > 1400) {

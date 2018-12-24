@@ -75,7 +75,7 @@ $(document).ready(function () {
          */
         var resmas = '?typeId=' + pasmas + '&pageNo=' + pageNo;
         $http(config.damin.example_value_url, 1, resmas, function (res) {
-            openData(res);
+            openData(res, 3);
         })
 
         /**
@@ -109,7 +109,7 @@ $(document).ready(function () {
                 var resmas = '?typeId=' + pasmas + '&pageNo=' + pageNo;
                 $http(config.damin.example_value_url, 1, resmas, function (res) {
                     // console.log(res.result);
-                    openData(res);
+                    openData(res, 2);
                 })
             })
         }
@@ -148,18 +148,33 @@ $(document).ready(function () {
                 $("#example-list-type-buttn").css('display', 'none');
                 strContent = '<div class="nodata"><a href="javascript:;">暂无数据</a></div>'
             }
-            if (type) {
-                $("#example-list-type-pics").append(strContent);
-                // 动画
-                createMation();
-            } else {
-                $("#example-list-type-pics").html(strContent);
-                // 动画
-                removeMation();
-                setTimeout(function () {
+
+            switch (type) {
+                case 1:    // 点击更多添加数据及动画
+                    $("#example-list-type-pics").append(strContent);
+                    //切换选项触发动画
                     createMation();
-                }, 100);
+                    break;
+                case 2:    // 点击选项更换数据及动画
+                    $("#example-list-type-pics").html(strContent);
+                    //切换选项触发动画
+                    removeMation();
+                    setTimeout(function () {
+                        createMation();
+                    }, 100)
+                    break;
+                case 3:    // 刷新页面不添加动画
+                    $("#example-list-type-pics").html(strContent);
+                    //刷新页面显示
+                    setTimeout(function () {
+                        if ($(window).scrollTop() > 700) {
+                            createMation();
+                        }
+                    }, 30)
+                    break;
             }
+
+
             btnDetails();
         }
         /**
@@ -190,10 +205,7 @@ $(document).ready(function () {
             $("#example-list-type-iamges .example-list-type-iamges-text").children().removeClass('active');
             return typeof callback == 'function' && callback();
         }
-        //刷新页面显示
-        if ($(window).scrollTop() > 700) {
-            createMation();
-        }
+
         //滚动显示动画
         $(window).scroll(function () {
             if ($(window).scrollTop() > 700) {

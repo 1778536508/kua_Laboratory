@@ -93,8 +93,9 @@
             display: block;
             width: 100px;
             height: 100px;
-            float: right;
-            margin-top: 40px;
+            @include pos();
+            bottom: 100px;
+            right: 70px;
           }
         }
         &:nth-of-type(1) {
