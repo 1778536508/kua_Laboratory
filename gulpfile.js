@@ -131,7 +131,7 @@ gulp.task('htmlmin', function(){
 
 
 
-gulp.task('default', ['server', 'useref']);
+gulp.task('default', ['server']);
 gulp.task('build', [
     'useref-index',
     'useref-home',
