@@ -21,6 +21,11 @@ $(document).ready(function () {
     function openData(res) {
         $("#details-title").html(res.title);
         $("#details-content").html(res.content);
+        $("#details-pdate").html(res.publishDate);
+        $("#details-person").html(res.person);
+        $("#details-content img").each(function() {
+            $(this).css("width", "100%");
+        });
     };
 
 
