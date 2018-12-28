@@ -248,9 +248,11 @@ html, body, .box {
     width: 100%;
     background: #000; }
     .formmode-content .formmode-content-programme .formmode-content-programme-list {
-      width: 100%; }
+      width: 100%;
+      height: 359px; }
       .formmode-content .formmode-content-programme .formmode-content-programme-list ul {
         width: 100%;
+        height: 100%;
         zoom: 1; }
         .formmode-content .formmode-content-programme .formmode-content-programme-list ul:after {
           display: block;
@@ -259,25 +261,31 @@ html, body, .box {
         .formmode-content .formmode-content-programme .formmode-content-programme-list ul li {
           float: left;
           width: 20%;
+          height: 100%;
           overflow: hidden;
           box-sizing: border-box;
           padding: 59px 0 78px 50px;
           border: 1px solid; }
           .formmode-content .formmode-content-programme .formmode-content-programme-list ul li:nth-of-type(1) {
             background: url("../images/img_features_1.png") no-repeat;
-            background-size: auto 100%; }
+            background-size: auto 100%;
+            background-position: center top; }
           .formmode-content .formmode-content-programme .formmode-content-programme-list ul li:nth-of-type(2) {
             background: url("../images/img_features_2.png") no-repeat;
-            background-size: auto 100%; }
+            background-size: auto 100%;
+            background-position: center top; }
           .formmode-content .formmode-content-programme .formmode-content-programme-list ul li:nth-of-type(3) {
             background: url("../images/img_features_3.png") no-repeat;
-            background-size: auto 100%; }
+            background-size: auto 100%;
+            background-position: center top; }
           .formmode-content .formmode-content-programme .formmode-content-programme-list ul li:nth-of-type(4) {
             background: url("../images/img_features_4.png") no-repeat;
-            background-size: auto 100%; }
+            background-size: auto 100%;
+            background-position: center top; }
           .formmode-content .formmode-content-programme .formmode-content-programme-list ul li:nth-of-type(5) {
             background: url("../images/img_features_5.png") no-repeat;
-            background-size: auto 100%; }
+            background-size: auto 100%;
+            background-position: center top; }
           .formmode-content .formmode-content-programme .formmode-content-programme-list ul li h2 {
             font-family: PingFangSC-Regular;
             font-size: 28px;
@@ -363,19 +371,24 @@ html, body, .box {
       content: 'K+ incubator'; }
     .formmode-content .formmode-content-programme:nth-of-type(3) .formmode-content-programme-list li:nth-of-type(1) {
       background: url("../images/img_incubator_1.png") no-repeat;
-      background-size: 100% 100%; }
+      background-size: 100% auto;
+      background-position: center top; }
     .formmode-content .formmode-content-programme:nth-of-type(3) .formmode-content-programme-list li:nth-of-type(2) {
       background: url("../images/img_incubator_2.png") no-repeat;
-      background-size: 100% 100%; }
+      background-size: 100% auto;
+      background-position: center top; }
     .formmode-content .formmode-content-programme:nth-of-type(3) .formmode-content-programme-list li:nth-of-type(3) {
       background: url("../images/img_incubator_3.png") no-repeat;
-      background-size: 100% 100%; }
+      background-size: 100% auto;
+      background-position: center top; }
     .formmode-content .formmode-content-programme:nth-of-type(3) .formmode-content-programme-list li:nth-of-type(4) {
       background: url("../images/img_incubator_4.png") no-repeat;
-      background-size: 100% 100%; }
+      background-size: 100% auto;
+      background-position: center top; }
     .formmode-content .formmode-content-programme:nth-of-type(3) .formmode-content-programme-list li:nth-of-type(5) {
       background: url("../images/img_incubator_5.png") no-repeat;
-      background-size: 100% 100%; }
+      background-size: 100% auto;
+      background-position: center top; }
   .formmode-content .formmode-content-joinus {
     width: 100%; }
     .formmode-content .formmode-content-joinus .formmode-content-joinus-texy {
@@ -646,4 +659,24 @@ html, body, .box {
     opacity: 1;
     transition: all .5s ease-out; }
 
-/*# sourceMappingURL=formmode.css.map */
+@media all and (max-width: 1280px) {
+  .formmode-content .formmode-content-programme:nth-of-type(3) .formmode-content-programme-list ul li:nth-of-type(1) {
+    background: url("../images/img_incubator_1.png") no-repeat;
+    background-size: auto 100%;
+    background-position: center top; }
+  .formmode-content .formmode-content-programme:nth-of-type(3) .formmode-content-programme-list ul li:nth-of-type(2) {
+    background: url("../images/img_incubator_2.png") no-repeat;
+    background-size: auto 100%;
+    background-position: center top; }
+  .formmode-content .formmode-content-programme:nth-of-type(3) .formmode-content-programme-list ul li:nth-of-type(3) {
+    background: url("../images/img_incubator_3.png") no-repeat;
+    background-size: auto 100%;
+    background-position: center top; }
+  .formmode-content .formmode-content-programme:nth-of-type(3) .formmode-content-programme-list ul li:nth-of-type(4) {
+    background: url("../images/img_incubator_4.png") no-repeat;
+    background-size: auto 100%;
+    background-position: center top; }
+  .formmode-content .formmode-content-programme:nth-of-type(3) .formmode-content-programme-list ul li:nth-of-type(5) {
+    background: url("../images/img_incubator_5.png") no-repeat;
+    background-size: auto 100%;
+    background-position: center top; } }
