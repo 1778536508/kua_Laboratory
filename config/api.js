@@ -88,8 +88,8 @@ var config = {
             images: '../../assets/images/2.png',
             title: '柳师尧',
             info: '总经理|K+孵化器负责人',
-            content1: '...',
-            content2: '...'
+            content1: '前中国国家地理·地道风物产品总监、前小牛电动电商产品负责人、前中国石油技术服务企业部门主管',
+            content2: '多次创业经验，先后带领金融、直播创业公司从0到1搭建，策划并实施中国国家地理新媒体转型业务，主导小牛电动自营电商、服务系统搭建，深度参与中石油总部应急平台等系列重大项目。'
         },
         {
             images: '../../assets/images/3.png',
@@ -117,97 +117,97 @@ var config = {
         list1: [
             {
                 images: '../../assets/images/1.png',
-                name: 'Kevin yu',
-                info: '前端架构师'
+                name: '柳科',
+                info: '创始人'
             },
             {
                 images: '../../assets/images/2.png',
-                name: 'Kevin yu',
-                info: '前端架构师'
+                name: '柳师尧',
+                info: '总经理|K+孵化器负责人'
             },
             {
                 images: '../../assets/images/3.png',
-                name: 'Kevin yu',
-                info: '前端架构师'
+                name: '李鹏 Gevin',
+                info: '副总经理|风物发现官负责人'
             },
             {
                 images: '../../assets/images/4.png',
-                name: 'Kevin yu',
-                info: '前端架构师'
+                name: '曹文静',
+                info: '产品创新与设计高级总监'
             },
             {
                 images: '../../assets/images/5.png',
-                name: 'Kevin yu',
-                info: '前端架构师'
+                name: '张扬',
+                info: '视觉体验设计总监'
             },
             {
                 images: '../../assets/images/6.png',
-                name: 'Kevin yu',
-                info: '前端架构师'
+                name: '郭倩文',
+                info: '产品创新与高级经理'
             },
         ],
         list2: [
             {
                 images: '../../assets/images/7.png',
-                name: 'Kevin yu',
-                info: '前端架构师'
+                name: '小莲',
+                info: '高级视觉体验设计师'
             },
             {
                 images: '../../assets/images/8.png',
-                name: 'Kevin yu',
-                info: '前端架构师'
+                name: '老白',
+                info: '高级视觉体验设计师'
             },
             {
                 images: '../../assets/images/9.png',
-                name: 'Kevin yu',
-                info: '前端架构师'
+                name: 'Criss',
+                info: '高级视觉体验设计师'
             },
             {
                 images: '../../assets/images/10.png',
-                name: 'Kevin yu',
-                info: '前端架构师'
+                name: '梦莹',
+                info: '产品运营经理'
             },
             {
                 images: '../../assets/images/11.png',
-                name: 'Kevin yu',
-                info: '前端架构师'
+                name: '简简',
+                info: '后勤中心'
             },
             {
                 images: '../../assets/images/12.png',
-                name: 'Kevin yu',
-                info: '前端架构师'
+                name: '慧洁',
+                info: '后勤中心'
             },
         ],
         list3: [
             {
                 images: '../../assets/images/13.png',
-                name: 'Kevin yu',
-                info: '前端架构师'
+                name: '沁来',
+                info: '产品创新与设计经理'
             },
             {
                 images: '../../assets/images/14.png',
-                name: 'Kevin yu',
-                info: '前端架构师'
+                name: '孙海洋',
+                info: '产品研发负责人'
             },
             {
                 images: '../../assets/images/15.png',
-                name: 'Kevin yu',
-                info: '前端架构师'
+                name: '珍珍',
+                info: '高级产品运营经理'
             },
             {
                 images: '../../assets/images/16.png',
-                name: 'Kevin yu',
-                info: '前端架构师'
+                name: '一丹',
+                info: '产品运营经理'
             },
             {
                 images: '../../assets/images/17.png',
-                name: 'Kevin yu',
-                info: '前端架构师'
+                name: '郑菲',
+                info: '产品运营经理'
             },
             {
                 images: '../../assets/images/18.png',
-                name: 'Kevin yu',
-                info: '前端架构师'
+                name: '书陪',
+                info: '后勤中心'
             },
         ],
     }
